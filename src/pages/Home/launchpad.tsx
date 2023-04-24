@@ -1,6 +1,6 @@
 import { ALink } from 'src/components/ALink';
 import { DiscordSvg, MediumSvg, RocketLogo, TelegramSvg, TwitterSvg, YoutubeSvg } from 'src/config/images';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const LaunchPad = () => {
   return (
@@ -172,8 +172,21 @@ const LaunchPadRocket = styled.div`
   }
 `;
 
+const floaty = keyframes`
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+`;
+
 const LaunchPadRocketLogo = styled.div`
   position: relative;
+  animation: ${floaty} 2s infinite;
   z-index: 1;
   background-size: 100%;
   background-position: center center;
