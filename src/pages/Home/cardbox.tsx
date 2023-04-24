@@ -26,7 +26,7 @@ export const CardBox = () => {
           <PhaseCard name="kingstarter" />
           <PhaseCard name="kingsale" />
         </PhaseCardContainer>
-        <ParticipiateTitle>Stay updated on new launches</ParticipiateTitle>
+        <NewlaunchesText>Stay updated on new launches</NewlaunchesText>
         <ALink link="https://t.me/KlNGfinance">
           <JoinTelegram>
             <img src={TelegramIcon} alt="telegram-icon" />
@@ -96,6 +96,20 @@ const ParticipiateTitle = styled.div`
   font-size: 30px;
   line-height: 36px;
   text-align: center;
+  @media screen and (max-width: 540px) {
+    font-size: 25px;
+  }
+`;
+
+const NewlaunchesText = styled.div`
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  @media screen and (max-width: 540px) {
+    font-size: 25px;
+    width: 210px;
+  }
 `;
 
 const PhaseCardContainer = styled.div`
