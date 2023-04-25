@@ -166,6 +166,7 @@ const LaunchPadRocket = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    background: #432ad9;
     background-color: #432ad9;
     /* background-color: red; */
     filter: blur(220.362px);

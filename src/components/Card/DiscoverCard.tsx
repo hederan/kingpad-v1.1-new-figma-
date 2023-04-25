@@ -39,6 +39,7 @@ const DiscoverCardContainer = styled.div`
 
 const DiscoverCardBackground = styled.div`
   background-color: #cd9bf4;
+  background: #cd9bf4;
   filter: blur(75px);
   -webkit-filter: blur(75px);
   position: absolute;
