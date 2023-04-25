@@ -39,8 +39,9 @@ export const CardBox = () => {
 };
 
 const CardBoxBackground = styled.div`
-  background: #432ad9;
+  background-color: #432ad9;
   filter: blur(220.362px);
+  -webkit-filter: blur(220.362px);
   opacity: 0.6;
   position: absolute;
   height: 1200px;

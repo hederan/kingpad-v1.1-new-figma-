@@ -38,8 +38,9 @@ const DiscoverCardContainer = styled.div`
 `;
 
 const DiscoverCardBackground = styled.div`
-  background: #cd9bf4;
+  background-color: #cd9bf4;
   filter: blur(75px);
+  -webkit-filter: blur(75px);
   position: absolute;
   top: 80px;
   width: 98px;
@@ -48,6 +49,7 @@ const DiscoverCardBackground = styled.div`
     width: 184px;
     height: 53px;
     filter: blur(40px);
+    -webkit-filter: blur(40px);
     top: 70px;
     left: 100px;
   }
