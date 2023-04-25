@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import { LaunchCard } from 'src/components/Card/LaunchCard';
 import { DiscoverCard } from 'src/components/Card/DiscoverCard';
 import { PhaseCard } from 'src/components/Card/PhaseCard';
-import { TelegramIcon } from 'src/config/images';
-import { ALink } from 'src/components/ALink';
 
 export const CardBox = () => {
   return (
@@ -26,13 +24,6 @@ export const CardBox = () => {
           <PhaseCard name="kingstarter" />
           <PhaseCard name="kingsale" />
         </PhaseCardContainer>
-        <NewlaunchesText>Stay updated on new launches</NewlaunchesText>
-        <ALink link="https://t.me/KlNGfinance">
-          <JoinTelegram>
-            <img src={TelegramIcon} alt="telegram-icon" />
-            Join Now
-          </JoinTelegram>
-        </ALink>
       </ParticipiateContainer>
     </CardBoxContainer>
   );
@@ -65,7 +56,7 @@ const CardBoxContainer = styled.div`
   flex-direction: column;
   gap: 54px;
   position: relative;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 `;
 
 const LaunchCardContainer = styled.div`
@@ -105,17 +96,6 @@ const ParticipiateTitle = styled.div`
   }
 `;
 
-const NewlaunchesText = styled.div`
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  @media screen and (max-width: 540px) {
-    font-size: 25px;
-    width: 210px;
-  }
-`;
-
 const PhaseCardContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -124,21 +104,4 @@ const PhaseCardContainer = styled.div`
   @media screen and (max-width: 540px) {
     flex-direction: column;
   }
-`;
-
-const JoinTelegram = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18px 20px;
-  gap: 10px;
-  border-radius: 100px;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
-  border: 1.5px solid transparent;
-  background: linear-gradient(#060111, #060111) padding-box,
-    linear-gradient(109.5deg, #cd9bf4 0%, #432ad9 99.79%) border-box;
-  cursor: pointer;
-  width: fit-content;
 `;

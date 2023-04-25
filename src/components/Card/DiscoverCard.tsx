@@ -42,8 +42,8 @@ const DiscoverCardBackground = styled.div`
   background: #cd9bf4;
   filter: blur(75px);
   -webkit-filter: blur(75px);
-  -webkit-backdrop-filter: blur(75px);
-  backdrop-filter: blur(75px);
+  /* -webkit-backdrop-filter: blur(75px); */
+  /* backdrop-filter: blur(75px); */
   position: absolute;
   top: 80px;
   width: 98px;
