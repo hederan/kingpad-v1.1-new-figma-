@@ -8,6 +8,7 @@ import { Layout } from './layouts/layout';
 
 import { Home } from './pages/Home';
 import { NotFoundPage } from './pages/404';
+import { PresalePage } from './pages/Presale';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Routes>
               <Route path={PUBLIC_ROUTES.default} element={<Home />} />
               <Route path={PUBLIC_ROUTES.home} element={<Home />} />
+              <Route path={PUBLIC_ROUTES.presale} element={<PresalePage />} />
               <Route path={PUBLIC_ROUTES.error404} element={<NotFoundPage />} />
               <Route path="*" element={<Navigate to={PUBLIC_ROUTES.error404} replace />} />
             </Routes>

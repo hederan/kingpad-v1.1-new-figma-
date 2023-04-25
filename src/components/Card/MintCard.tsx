@@ -114,6 +114,7 @@ const MintButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 17px;
   span {
     font-weight: 700;
     line-height: 20px;

@@ -71,6 +71,11 @@ const LaunchCardContainer = styled.div`
   z-index: 1;
   width: 360px;
   height: 532px;
+  @media screen and (max-width: 1240px) {
+    width: 100%;
+    height: auto;
+  }
+
   @media screen and (max-width: 420px) {
     width: 100%;
   }
@@ -80,6 +85,9 @@ const LaunchCardImage = styled.img`
   border-radius: 20px 20px 0 0;
   width: 100%;
   height: 200px;
+  @media screen and (max-width: 800px) {
+    height: 250px;
+  }
 `;
 
 const LaunchCardContent = styled.div`
@@ -132,8 +140,12 @@ const ProjectLogo = styled.img`
 
 const LaunchMiniCardContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 30px;
+  @media screen and (max-width: 420px) {
+    gap: 15px;
+  }
 `;
 
 interface LaunchMiniCardProps {
@@ -153,8 +165,8 @@ const LaunchMiniCard = (props: LaunchMiniCardProps) => {
   );
 };
 const LaunchMiniCardWrapper = styled.div`
-  width: 84px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 11px;
   display: flex;
   justify-content: center;
@@ -194,8 +206,8 @@ const LaunchpadStatus = (props: { status: string }) => {
 };
 
 const LaunchpadStatusContainer = styled.div`
-  width: 84px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 11px;
   display: flex;
   justify-content: center;

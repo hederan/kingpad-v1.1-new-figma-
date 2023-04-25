@@ -39,5 +39,9 @@ import StarSvg from '../assets/svg/item/Star.svg'
 import KingstarterSvg from '../assets/svg/item/Kingstarter.svg'
 import KingsaleSvg from '../assets/svg/item/Kingsale.svg'
 
-export { KingpadLogoSvg, KingpadLogoGreySvg, KingpadIconSvg, KingpadGrey, KingpadFooterLogo, TwitterSvg, TelegramSvg, YoutubeSvg, MediumSvg, DiscordSvg, RocketLogo, BinanceLogo, EthereumLogo, ArbitrumLogo, PolygonLogo, BlockchainLogo1, BlockchainLogo2, BlockchainLogo3, MarioImage, OnyxImage, WebsiteSvg, FacebookSvg, InstagramSvg, KingpassSvg, SplashImage, RocketUpSvg, TelegramIcon, DiamondSvg, StarSvg, KingstarterSvg, KingsaleSvg
+// Authentication logo
+import KYCLogoSvg from '../assets/svg/logo/KYC-logo.svg'
+import CertikLogoSvg from '../assets/svg/logo/Certik-logo.svg'
+
+export { KingpadLogoSvg, KingpadLogoGreySvg, KingpadIconSvg, KingpadGrey, KingpadFooterLogo, TwitterSvg, TelegramSvg, YoutubeSvg, MediumSvg, DiscordSvg, RocketLogo, BinanceLogo, EthereumLogo, ArbitrumLogo, PolygonLogo, BlockchainLogo1, BlockchainLogo2, BlockchainLogo3, MarioImage, OnyxImage, WebsiteSvg, FacebookSvg, InstagramSvg, KingpassSvg, SplashImage, RocketUpSvg, TelegramIcon, DiamondSvg, StarSvg, KingstarterSvg, KingsaleSvg, KYCLogoSvg, CertikLogoSvg
  }

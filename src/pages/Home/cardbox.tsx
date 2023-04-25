@@ -74,6 +74,11 @@ const LaunchCardWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+
+  @media screen and (max-width: 1240px) {
+    width: 100%;
+  }
+
   @media screen and (max-width: 800px) {
     flex-direction: column;
   }

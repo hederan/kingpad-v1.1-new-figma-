@@ -65,12 +65,16 @@ const NavModalContainer = styled.div`
 `;
 
 const NavModalWrapper = styled.div`
-  padding: 45px 38px;
+  padding: 41px 32px;
   @media screen and (max-width: 540px) {
-    padding: 40px 38px;
+    padding: 37px 32px;
   }
+  @media screen and (max-width: 450px) {
+    padding: 26px 21px;
+  }
+
   @media screen and (max-width: 420px) {
-    padding: 38px;
+    padding: 24px 21px;
   }
 `;
 
