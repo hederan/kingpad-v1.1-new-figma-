@@ -43,6 +43,8 @@ const CardBoxBackground = styled.div`
   background: #432ad9;
   filter: blur(220.362px);
   -webkit-filter: blur(220.362px);
+  -webkit-backdrop-filter: blur(220.362px);
+  backdrop-filter: blur(220.362px);
   opacity: 0.6;
   position: absolute;
   height: 1200px;
