@@ -97,6 +97,9 @@ const LaunchCardContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  @media screen and (max-width: 380px) {
+    padding: 20px;
+  }
 `;
 
 const LaunchCardHeader = styled.div`
@@ -241,6 +244,10 @@ const LaunchCardTimeContainer = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
+  @media screen and (max-width: 380px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const LaunchCardTimerTitle = styled.div`
