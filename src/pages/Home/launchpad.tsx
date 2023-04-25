@@ -169,8 +169,9 @@ const LaunchPadRocket = styled.div`
     background: #432ad9;
     background-color: #432ad9;
     /* background-color: red; */
-    /* filter: blur(220.362px);
-    -webkit-filter: blur(220.362px); */
+    -webkit-backdrop-filter: blur(220.362px);
+    backdrop-filter: blur(220.362px);
+    filter: blur(220.362px);
     z-index: -1;
   }
 `;
