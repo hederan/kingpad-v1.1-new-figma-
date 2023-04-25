@@ -79,7 +79,7 @@ const LaunchCardWrapper = styled.div`
     width: 100%;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 860px) {
     flex-direction: column;
   }
 `;
