@@ -32,17 +32,18 @@ import OnyxImage from '../assets/png/Onyx-WorldOfDraderraWallpaper.png'
 import SplashImage from '../assets/png/splash.png'
 
 // Item Image
-import KingpassSvg from '../assets/svg/item/Kingpass.svg'
-import RocketUpSvg from '../assets/svg/item/Rocket-Up.svg'
+import KingpassPng from '../assets/png/Kingpass.png'
+import RocketUpPng from '../assets/png/rocket-up.png'
 import TelegramIcon from '../assets/svg/item/TelegramIcon.svg'
 import DiamondSvg from '../assets/svg/item/Diamond.svg'
 import StarSvg from '../assets/svg/item/Star.svg'
-import KingstarterSvg from '../assets/svg/item/Kingstarter.svg'
-import KingsaleSvg from '../assets/svg/item/Kingsale.svg'
+import KingstarterPng from '../assets/png/kingstarter.png'
+import KingsalePng from '../assets/png/kingsale.png'
+import HandCursorPng from '../assets/png/hand-cursor.png'
 
 // Authentication logo
 import KYCLogoSvg from '../assets/svg/logo/KYC-logo.svg'
 import CertikLogoSvg from '../assets/svg/logo/Certik-logo.svg'
 
-export { KingpadLogoSvg, KingpadLogoGreySvg, KingpadIconSvg, KingpadGrey, KingpadFooterLogo, TwitterSvg, TelegramSvg, YoutubeSvg, MediumSvg, DiscordSvg, RocketLogo, BinanceLogo, EthereumLogo, ArbitrumLogo, PolygonLogo, BlockchainLogo1, BlockchainLogo2, BlockchainLogo3, MarioImage, OnyxImage, WebsiteSvg, FacebookSvg, InstagramSvg, KingpassSvg, SplashImage, RocketUpSvg, TelegramIcon, DiamondSvg, StarSvg, KingstarterSvg, KingsaleSvg, KYCLogoSvg, CertikLogoSvg, KingpassLogoSvg
+export { KingpadLogoSvg, KingpadLogoGreySvg, KingpadIconSvg, KingpadGrey, KingpadFooterLogo, TwitterSvg, TelegramSvg, YoutubeSvg, MediumSvg, DiscordSvg, RocketLogo, BinanceLogo, EthereumLogo, ArbitrumLogo, PolygonLogo, BlockchainLogo1, BlockchainLogo2, BlockchainLogo3, MarioImage, OnyxImage, WebsiteSvg, FacebookSvg, InstagramSvg, KingpassPng, SplashImage, RocketUpPng, TelegramIcon, DiamondSvg, StarSvg, KingstarterPng, KingsalePng, KYCLogoSvg, CertikLogoSvg, KingpassLogoSvg, HandCursorPng
  }

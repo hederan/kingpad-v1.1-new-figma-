@@ -87,6 +87,12 @@ const SaleCardImage = styled.img`
   height: 100%;
   border-radius: 20px 0 0 20px;
   object-fit: cover;
+  background-image: #432ad9;
+  filter: saturate(0);
+  :hover {
+    filter: none;
+  }
+
   @media screen and (max-width: 1180px) {
     flex-direction: column;
     height: 250px;
@@ -178,6 +184,10 @@ const SocialLinks = styled.div`
 const SocialLogo = styled.img`
   width: auto;
   height: 15px;
+  &:hover {
+    filter: brightness(0) invert(1);
+    color: #ffffff;
+  }
 `;
 
 const SaleCardText = styled.div`

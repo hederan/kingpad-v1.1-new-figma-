@@ -134,6 +134,10 @@ const SocialLinks = styled.div`
 const SocialLink = styled.img`
   height: 15px;
   width: auto;
+  &:hover {
+    filter: brightness(0) invert(1);
+    color: #ffffff;
+  }
 `;
 
 const ProjectLogo = styled.img`

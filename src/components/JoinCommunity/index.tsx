@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { ALink } from '../ALink';
-import { TelegramIcon } from 'src/config/images';
+import { HandCursorPng, TelegramIcon } from 'src/config/images';
 
 export const JoinCommunity = () => {
   return (
@@ -45,9 +45,13 @@ const JoinTelegram = styled.div`
   font-family: 'gotham-bold';
   font-size: 17px;
   line-height: 20px;
-  border: 1.5px solid transparent;
+  border: 1px solid transparent;
   background: linear-gradient(#060111, #060111) padding-box,
     linear-gradient(109.5deg, #cd9bf4 0%, #432ad9 99.79%) border-box;
-  cursor: pointer;
   width: fit-content;
+  cursor: url(${HandCursorPng}), auto;
+  :hover {
+    background: linear-gradient(101.12deg, #8462f6 12.74%, #432ad9 74.63%);
+    background-origin: border-box;
+  }
 `;

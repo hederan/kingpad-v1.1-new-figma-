@@ -1,5 +1,6 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import styled from 'styled-components';
+import { HandCursorPng } from 'src/config/images';
 
 export const WalletConnectButton = () => {
   return (
@@ -88,13 +89,17 @@ const KingButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  cursor: url(${HandCursorPng}), auto;
   border: none;
   outline: none;
   font-family: 'gotham-bold';
   font-size: 15px;
   color: #ffffff;
   text-transform: none;
+  :hover {
+    background: linear-gradient(283.23deg, #ffffff 25.15%, #cd9bf4 124.03%);
+    color: #060111;
+  }
   @media screen and (max-width: 540px) {
     height: 36px;
     width: 108px;

@@ -1,10 +1,10 @@
-import { KingpassSvg } from 'src/config/images';
+import { HandCursorPng, KingpassPng } from 'src/config/images';
 import styled from 'styled-components';
 
 export const MintCard = () => {
   return (
     <MintCardContainer>
-      <KingpassImg src={KingpassSvg} alt="kingpass-img" />
+      <KingpassImg src={KingpassPng} alt="kingpass-img" />
       <MintCardSpace />
       <MintCardWrapper>
         <MintCardContent>
@@ -107,7 +107,7 @@ const SecondaryText = styled.div`
 
 const MintButton = styled.div`
   border-radius: 100px;
-  cursor: pointer;
+  cursor: url(${HandCursorPng}), auto;
   border: 1px solid transparent;
   background: linear-gradient(#060111, #060111) padding-box,
     linear-gradient(109.5deg, #cd9bf4 0%, #432ad9 99.79%) border-box;
@@ -116,6 +116,11 @@ const MintButton = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 17px;
+  cursor: url(${HandCursorPng}), auto;
+  :hover {
+    background: linear-gradient(101.12deg, #8462f6 12.74%, #432ad9 74.63%);
+    background-origin: border-box;
+  }
   span {
     font-family: 'gotham-bold';
     line-height: 20px;

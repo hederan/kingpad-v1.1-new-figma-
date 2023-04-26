@@ -1,4 +1,4 @@
-import { DiamondSvg, KingsaleSvg, KingstarterSvg, StarSvg } from 'src/config/images';
+import { DiamondSvg, KingsalePng, KingstarterPng, StarSvg } from 'src/config/images';
 import styled from 'styled-components';
 
 export const PhaseCard = (props: { name: string }) => {
@@ -28,7 +28,7 @@ export const PhaseCard = (props: { name: string }) => {
           )}
         </PhaseCardSentence>
       </PhaseCardContent>
-      <PhaseCardImage src={name === 'kingstarter' ? KingstarterSvg : KingsaleSvg} alt="phasecard-image" />
+      <PhaseCardImage src={name === 'kingstarter' ? KingstarterPng : KingsalePng} alt="phasecard-image" />
     </PhaseCardContainer>
   );
 };
@@ -43,6 +43,11 @@ const PhaseCardContainer = styled.div`
   align-items: center;
   width: 100%;
   position: relative;
+  color: #ffffff;
+  :hover {
+    background: linear-gradient(180deg, #ffffff 0%, #cd9bf4 85.42%);
+    color: #060111;
+  }
   @media screen and (max-width: 1240px) {
     flex-direction: column;
     width: 335px;

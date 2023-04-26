@@ -231,6 +231,10 @@ const FooterSocialItem = styled.img`
   width: 24px;
   height: auto;
   cursor: pointer;
+  &:hover {
+    filter: brightness(0) invert(1);
+    color: #ffffff;
+  }
   @media screen and (max-width: 450px) {
     width: 20px;
   }

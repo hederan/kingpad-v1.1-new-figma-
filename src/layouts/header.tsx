@@ -6,14 +6,16 @@ import { NavModal } from 'src/components/Modal/navmodal';
 import { Container } from 'src/components/container/container';
 import { ALink } from 'src/components/ALink';
 import { WalletConnectButton } from 'src/components/Button/WalletConnectButton';
+import { useNavigate } from 'react-router-dom';
 
 export const Header = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const navigate = useNavigate();
   return (
     <Container>
       <HeaderContainer>
         <HeaderNavbar>
-          <KingpadLogo src={KingpadLogoSvg} alt="kingpad-logo" />
+          <KingpadLogo src={KingpadLogoSvg} alt="kingpad-logo" onClick={() => navigate('/')} />
           <KingpadMobileLogo src={KingpadIconSvg} alt="kingpad-mobile-logo" />
           <NavLinkContainer>
             <NavLink>Service</NavLink>
@@ -95,6 +97,14 @@ const NavLink = styled.div`
   font-size: 16px;
   cursor: pointer;
   color: #ffffff;
+  font-weight: 400;
+  :hover {
+    background: linear-gradient(99.95deg, #cd9bf4 8.73%, #432ad9 83.74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
 `;
 
 const MobileNavbar = styled.div`

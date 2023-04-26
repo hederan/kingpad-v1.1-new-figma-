@@ -1,5 +1,13 @@
 import { ALink } from 'src/components/ALink';
-import { DiscordSvg, MediumSvg, RocketLogo, TelegramSvg, TwitterSvg, YoutubeSvg } from 'src/config/images';
+import {
+  DiscordSvg,
+  MediumSvg,
+  RocketLogo,
+  TelegramSvg,
+  TwitterSvg,
+  YoutubeSvg,
+  HandCursorPng
+} from 'src/config/images';
 import styled, { keyframes } from 'styled-components';
 
 export const LaunchPad = () => {
@@ -140,6 +148,11 @@ const SocialItem = styled.img`
   width: 24px;
   height: auto;
   cursor: pointer;
+  color: #ffffff;
+  &:hover {
+    filter: brightness(0) invert(1);
+    color: #ffffff;
+  }
   @media screen and (max-width: 450px) {
     width: 20px;
   }
@@ -268,13 +281,17 @@ const LaunchPadCardAction = styled.div`
   display: inline-block;
   padding: 14px 20px;
   border-radius: 100px;
-  cursor: pointer;
+  cursor: url(${HandCursorPng}), auto;
   border: 1px solid transparent;
   background: linear-gradient(#060111, #060111) padding-box,
     linear-gradient(109.5deg, #cd9bf4 0%, #432ad9 99.79%) border-box;
   font-family: 'gotham-bold';
   font-size: 17px;
   line-height: 20px;
+  :hover {
+    background: linear-gradient(101.12deg, #8462f6 12.74%, #432ad9 74.63%);
+    border: none;
+  }
   @media screen and (max-width: 1120px) {
     display: none;
   }
@@ -366,10 +383,14 @@ const LaunchPadCardMobileAction = styled.div`
   font-family: 'gotham-bold';
   font-size: 17px;
   line-height: 20px;
-  cursor: pointer;
   border: 1px solid transparent;
   background: linear-gradient(#060111, #060111) padding-box,
     linear-gradient(109.5deg, #cd9bf4 0%, #432ad9 99.79%) border-box;
+  cursor: url(${HandCursorPng}), auto;
+  :hover {
+    background: linear-gradient(101.12deg, #8462f6 12.74%, #432ad9 74.63%);
+    background-origin: border-box;
+  }
   @media screen and (max-width: 1120px) {
     display: inline-block;
   }

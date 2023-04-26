@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { RocketUpSvg } from 'src/config/images';
+import { RocketUpPng } from 'src/config/images';
 import { ExploreButton } from '../Button/explore';
 
 export const DiscoverCard = () => {
   return (
     <DiscoverCardContainer>
       <DiscoverCardBackground />
-      <RocketImg src={RocketUpSvg} alt="rocket-image" />
+      <RocketImg src={RocketUpPng} alt="rocket-image" />
       <DiscoverCardAction>
         <DiscoverCardTitle>Discover all launches on Kingpad</DiscoverCardTitle>
         <ExploreButton>Explore all</ExploreButton>
