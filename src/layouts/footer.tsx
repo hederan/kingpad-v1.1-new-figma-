@@ -184,6 +184,7 @@ const FooterLinkTitle = styled.div`
   font-size: 15px;
   line-height: 18px;
   color: #8462f6;
+  font-family: 'gotham-bold';
 `;
 
 const FooterLinkNavs = styled.div`
