@@ -77,7 +77,8 @@ const MintCardContent = styled.div`
 const PrimaryText = styled.div`
   font-size: 30px;
   line-height: 36px;
-  font-weight: 700;
+  font-family: 'gotham-bold';
+  font-family: 'gotham-bold';
   @media screen and (max-width: 1084px) {
     text-align: center;
   }
@@ -116,7 +117,7 @@ const MintButton = styled.div`
   align-items: center;
   font-size: 17px;
   span {
-    font-weight: 700;
+    font-family: 'gotham-bold';
     line-height: 20px;
   }
 `;

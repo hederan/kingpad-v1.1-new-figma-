@@ -120,7 +120,7 @@ const SecondaryText = styled.div`
 `;
 
 const LaunchCardTitle = styled.div`
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 21px;
   line-height: 25px;
 `;
@@ -182,13 +182,13 @@ const LaunchMiniCardWrapper = styled.div`
 `;
 
 const LaunchMiniCardValue = styled.div`
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 21px;
   line-height: 25px;
 `;
 
 const LaunchMiniCardCurrncy = styled.div`
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 14px;
   line-height: 17px;
 `;
@@ -251,7 +251,7 @@ const LaunchCardTimeContainer = styled.div`
 `;
 
 const LaunchCardTimerTitle = styled.div`
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 14px;
   line-height: 17px;
   color: #8462f6;

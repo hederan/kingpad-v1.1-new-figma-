@@ -16,7 +16,7 @@ const ExploreButtonContainer = styled.div`
   padding: 10px 20px;
   cursor: pointer;
   width: fit-content;
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 15px;
   line-height: 18px;
 `;

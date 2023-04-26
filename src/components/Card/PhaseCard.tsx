@@ -78,7 +78,7 @@ const PhaseCardTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 30px;
   line-height: 36px;
   text-transform: capitalize;

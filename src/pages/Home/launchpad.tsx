@@ -272,7 +272,7 @@ const LaunchPadCardAction = styled.div`
   border: 1px solid transparent;
   background: linear-gradient(#060111, #060111) padding-box,
     linear-gradient(109.5deg, #cd9bf4 0%, #432ad9 99.79%) border-box;
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 17px;
   line-height: 20px;
   @media screen and (max-width: 1120px) {
@@ -363,7 +363,7 @@ const LaunchPadCardMobileAction = styled.div`
   border-radius: 100px;
   padding: 14px 20px;
   border-radius: 100px;
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 17px;
   line-height: 20px;
   cursor: pointer;

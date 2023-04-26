@@ -119,7 +119,7 @@ const PresaleHeaderDetail = styled.div`
 `;
 
 const PresaleTitle = styled.div`
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 30px;
   line-height: 36px;
   @media screen and (max-width: 540px) {

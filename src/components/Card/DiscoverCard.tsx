@@ -76,7 +76,7 @@ const RocketImg = styled.img`
 `;
 
 const DiscoverCardTitle = styled.div`
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 21px;
   line-height: 25px;
   width: 128px;

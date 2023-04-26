@@ -25,7 +25,7 @@ const JoinCommunityContainer = styled.div`
 `;
 
 const NewlaunchesText = styled.div`
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -42,7 +42,7 @@ const JoinTelegram = styled.div`
   padding: 18px 20px;
   gap: 10px;
   border-radius: 100px;
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 17px;
   line-height: 20px;
   border: 1.5px solid transparent;

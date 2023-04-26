@@ -92,7 +92,7 @@ const ParticipiateContainer = styled.div`
 `;
 
 const ParticipiateTitle = styled.div`
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 30px;
   line-height: 36px;
   text-align: center;

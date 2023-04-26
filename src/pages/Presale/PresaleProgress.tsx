@@ -1,3 +1,5 @@
+import { ContributionCard, EndedCard, NoKingpassCard, NoWalletCard } from 'src/components/Card/PresaleStatusCard';
+import { BorderLine } from 'src/components/Line/BorderLine';
 import { BinanceLogo, StarSvg } from 'src/config/images';
 import styled from 'styled-components';
 
@@ -33,10 +35,46 @@ export const PresaleProgress = () => {
             <InfoName>Status</InfoName>
           </PresaleStatus>
         </PresaleProgressInfos1>
+        <BorderLine />
+        <PresaleProgressInfos2>
+          <PresaleValueContainer>
+            <PresaleValue value={900} currency={'BNB'} name="Soft cap" />
+            <PresaleValue value={1800} currency={'BNB'} name="Soft cap" />
+            <PresaleValue value={0.1} currency={'BNB'} name="Soft cap" />
+            <PresaleValue value={4} currency={'BNB'} name="Soft cap" />
+          </PresaleValueContainer>
+          <PresaleDuration>
+            <PresaleTime>
+              <Timer>
+                <TimeValue>01</TimeValue>
+                <TimeUnit>D</TimeUnit>
+              </Timer>
+              <TimeLine />
+              <Timer>
+                <TimeValue>12</TimeValue>
+                <TimeUnit>H</TimeUnit>
+              </Timer>
+              <TimeLine />
+              <Timer>
+                <TimeValue>22</TimeValue>
+                <TimeUnit>M</TimeUnit>
+              </Timer>
+              <TimeLine />
+              <Timer>
+                <TimeValue>35</TimeValue>
+                <TimeUnit>S</TimeUnit>
+              </Timer>
+            </PresaleTime>
+            <InfoName>Starts In</InfoName>
+          </PresaleDuration>
+        </PresaleProgressInfos2>
+        <BorderLine />
+        <PresaleProgressInfos3>
+          <ProgressBar value={50} />
+          <PresaleValue value={900} currency={'BNB'} name="Raised" />
+        </PresaleProgressInfos3>
       </PresaleProgressContent>
-      {/* <PresaleProgressCardContainer>
-
-            </PresaleProgressCardContainer> */}
+      <EndedCard />
     </PresaleProgressContainer>
   );
 };
@@ -132,13 +170,13 @@ const Timer = styled.div`
 `;
 
 const TimeValue = styled.div`
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 21px;
   line-height: 25px;
 `;
 
 const TimeUnit = styled.div`
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 14px;
   line-height: 17px;
 `;
@@ -182,4 +220,87 @@ const StatusBadge = styled.div<{ name: string }>`
   border-radius: 50%;
   background-color: ${(props) =>
     props.name === 'upcoming' ? '#FF9B52' : props.name === 'ended' ? '#ff4056' : '#00fe9a'};
+`;
+
+const PresaleProgressInfos2 = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const PresaleValueContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 80px;
+`;
+
+interface PresaleValueProps {
+  value: number;
+  currency: string;
+  name: string;
+}
+
+const PresaleValue = (props: PresaleValueProps) => {
+  const { value, currency, name } = props;
+  return (
+    <PresaleValueWrapper>
+      <PresaleNumberValue>{value}</PresaleNumberValue>
+      <PresaleCurrency>{currency}</PresaleCurrency>
+      <PresaleValueName>{name}</PresaleValueName>
+    </PresaleValueWrapper>
+  );
+};
+
+const PresaleValueWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+`;
+
+const PresaleNumberValue = styled.div`
+  font-family: 'gotham-bold';
+  font-size: 21px;
+  line-height: 25px;
+`;
+
+const PresaleCurrency = styled.div`
+  font-family: 'gotham-bold';
+  font-size: 14px;
+  line-height: 17px;
+`;
+
+const PresaleValueName = styled.div`
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #cd9bf4;
+`;
+
+const PresaleProgressInfos3 = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 148px;
+`;
+
+const ProgressBar = (props: { value: number }) => {
+  const { value } = props;
+  return (
+    <ProgressBarContainer>
+      <ProgressValueBar value={value} />
+    </ProgressBarContainer>
+  );
+};
+
+const ProgressBarContainer = styled.div`
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  padding: 15px 13px;
+  width: 375px;
+`;
+
+const ProgressValueBar = styled.div<{ value: number }>`
+  border: 5px solid #52ffac;
+  border-radius: 10px;
+  width: ${(props) => props.value}%;
 `;

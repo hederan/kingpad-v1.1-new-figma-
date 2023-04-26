@@ -87,7 +87,7 @@ const CommonStyle = css`
   align-items: center;
   gap: 7.5px;
   border: 0.75px solid transparent;
-  font-weight: 700;
+  font-family: 'gotham-bold';
   font-size: 13px;
   line-height: 16px;
   width: fit-content;

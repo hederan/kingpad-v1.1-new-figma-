@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { NavModal } from 'src/components/Modal/navmodal';
 import { Container } from 'src/components/container/container';
 import { ALink } from 'src/components/ALink';
+import { WalletConnectButton } from 'src/components/Button/WalletConnectButton';
 
 export const Header = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -28,7 +29,7 @@ export const Header = () => {
             <BsList style={{ width: '27px', height: '27px' }} />
           </MobileNavbar>
         </HeaderNavbar>
-        <WalletConnectButton>Connect</WalletConnectButton>
+        <WalletConnectButton />
         <NavModal isState={isModalOpen} handleState={setModalOpen} />
       </HeaderContainer>
     </Container>
@@ -94,26 +95,6 @@ const NavLink = styled.div`
   font-size: 16px;
   cursor: pointer;
   color: #ffffff;
-`;
-
-const WalletConnectButton = styled.div`
-  background: linear-gradient(283.23deg, #432ad9 25.15%, #cd9bf4 124.03%);
-  border-radius: 50px;
-  width: 132px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-family: 'gotham-bold';
-  font-size: 15px;
-  color: #ffffff;
-  @media screen and (max-width: 540px) {
-    height: 36px;
-    width: 108px;
-    font-size: 12px;
-    line-height: 15px;
-  }
 `;
 
 const MobileNavbar = styled.div`
