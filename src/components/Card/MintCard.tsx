@@ -5,25 +5,43 @@ export const MintCard = () => {
   return (
     <MintCardContainer>
       <KingpassImg src={KingpassPng} alt="kingpass-img" />
-      <MintCardSpace />
-      <MintCardWrapper>
-        <MintCardContent>
-          <PrimaryText>Reserve your allocation </PrimaryText>
-          <SecondaryText>
-            Minting a Kingpass allows you to enjoy reserved allocations in every start-up launched at Kingpad. If you
-            enjoy a relaxed and guaranteed way of investing, the Kingpass is what you are looking for.
-          </SecondaryText>
-        </MintCardContent>
-        <MintButton>
-          <span>Mint Now</span>
-          <HandCursorImg src={HandCursorPng} alt="hand-cursor" />
-        </MintButton>
-      </MintCardWrapper>
+      <MintCardContentContainer>
+        <MintCardSpace />
+        <MintCardWrapper>
+          <MintCardContent>
+            <PrimaryText>Reserve your allocation </PrimaryText>
+            <SecondaryText>
+              Minting a Kingpass allows you to enjoy reserved allocations in every start-up launched at Kingpad. If you
+              enjoy a relaxed and guaranteed way of investing, the Kingpass is what you are looking for.
+            </SecondaryText>
+          </MintCardContent>
+          <MintButton>
+            <span>Mint Now</span>
+            <HandCursorImg src={HandCursorPng} alt="hand-cursor" />
+          </MintButton>
+        </MintCardWrapper>
+      </MintCardContentContainer>
     </MintCardContainer>
   );
 };
 
 const MintCardContainer = styled.div`
+  background: #060111;
+  border-radius: 20px;
+  width: 100%;
+  position: relative;
+  /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 1084px) {
+    gap: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const MintCardContentContainer = styled.div`
   background: #060111;
   border-radius: 20px;
   width: 100%;
@@ -46,6 +64,7 @@ const KingpassImg = styled.img`
   position: absolute;
   top: -35px;
   left: 40px;
+  z-index: 1;
   @media screen and (max-width: 1084px) {
     position: static;
   }
@@ -144,6 +163,7 @@ const MintButton = styled.div`
   }
   &:hover img {
     transform: translateY(-100px);
+    visibility: visible;
   }
   span {
     font-family: 'gotham-bold';
