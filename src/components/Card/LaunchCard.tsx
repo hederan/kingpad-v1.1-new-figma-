@@ -16,7 +16,10 @@ import { ALink } from '../ALink';
 export const LaunchCard = () => {
   return (
     <LaunchCardContainer>
-      <LaunchCardImage src={SplashImage} alt="launchcard-image" />
+      <LaunchCardImageContainer>
+        <LaunchCardImage src={SplashImage} alt="launchcard-image" />
+        <LaunchCardImageCover />
+      </LaunchCardImageContainer>
       <LaunchCardContent>
         <LaunchCardHeader>
           <LaunchCardHeaderContent>
@@ -65,6 +68,27 @@ export const LaunchCard = () => {
   );
 };
 
+const LaunchCardImage = styled.img`
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 100%;
+  @media screen and (max-width: 800px) {
+    height: 250px;
+  }
+`;
+
+const LaunchCardImageCover = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: #432ad9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  border-radius: 20px 20px 0 0;
+  transition: all linear 0.3s;
+`;
+
 const LaunchCardContainer = styled.div`
   background: #060111;
   border-radius: 20px;
@@ -79,15 +103,21 @@ const LaunchCardContainer = styled.div`
   @media screen and (max-width: 420px) {
     width: 100%;
   }
+
+  &:hover ${LaunchCardImage} {
+    filter: none;
+  }
+
+  &:hover ${LaunchCardImageCover} {
+    opacity: 0;
+  }
+  transition: all linear 0.3s;
 `;
 
-const LaunchCardImage = styled.img`
-  border-radius: 20px 20px 0 0;
+const LaunchCardImageContainer = styled.div`
   width: 100%;
   height: 200px;
-  @media screen and (max-width: 800px) {
-    height: 250px;
-  }
+  position: relative;
 `;
 
 const LaunchCardContent = styled.div`

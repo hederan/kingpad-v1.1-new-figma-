@@ -16,7 +16,10 @@ import { ExploreButton } from '../Button/explore';
 export const SaleCard = () => {
   return (
     <SaleCardContainer>
-      <SaleCardImage src={OnyxImage} alt="salecard-image" />
+      <SaleCardImageContainer>
+        <SaleCardImage src={OnyxImage} alt="salecard-image" />
+        <SaleCardImageCover />
+      </SaleCardImageContainer>
       <SaleCardContent>
         <SaleCardDetails>
           <SaleCardHeader>
@@ -68,6 +71,37 @@ export const SaleCard = () => {
   );
 };
 
+const SaleCardImage = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  object-fit: cover;
+  filter: saturate(0);
+  transition: all linear 0.3s;
+  @media screen and (max-width: 1180px) {
+    flex-direction: column;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+  @media screen and (max-width: 640px) {
+    height: 350px;
+  }
+`;
+
+const SaleCardImageCover = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: #432ad9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  border-radius: 20px 0 0 20px;
+  transition: all linear 0.3s;
+`;
+
 const SaleCardContainer = styled.div`
   width: 100%;
   height: 380px;
@@ -80,29 +114,20 @@ const SaleCardContainer = styled.div`
     height: 100%;
     width: auto;
   }
-`;
-
-const SaleCardImage = styled.img`
-  width: 50%;
-  height: 100%;
-  border-radius: 20px 0 0 20px;
-  object-fit: cover;
-  background-image: #432ad9;
-  filter: saturate(0);
-  :hover {
+  &:hover ${SaleCardImage} {
     filter: none;
   }
 
-  @media screen and (max-width: 1180px) {
-    flex-direction: column;
-    height: 250px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
+  &:hover ${SaleCardImageCover} {
+    opacity: 0;
   }
-  @media screen and (max-width: 640px) {
-    height: 350px;
-  }
+  transition: all linear 0.3s;
+`;
+
+const SaleCardImageContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  position: relative;
 `;
 
 const SaleCardContent = styled.div`
