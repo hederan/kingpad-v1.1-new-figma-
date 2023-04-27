@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+import { useRef, useEffect, useState } from 'react';
 import {
   BinanceLogo,
   OnyxImage,
@@ -14,11 +16,40 @@ import { ALink } from '../ALink';
 import { ExploreButton } from '../Button/explore';
 
 export const SaleCard = () => {
+  const saleCardRef = useRef<HTMLDivElement>(null);
+  const [scrollPos, setScrollPos] = useState(0);
+  const [isTurnOn, setTurnOn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPos(position);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const node = saleCardRef.current;
+    const windowHeight = window.innerHeight;
+    if (node === null) return;
+    const { top } = node.getBoundingClientRect();
+    const height = node.clientHeight;
+    if (top < windowHeight / 2 && top > -height) {
+      setTurnOn(true);
+    } else {
+      setTurnOn(false);
+    }
+  }, [scrollPos]);
+
   return (
-    <SaleCardContainer>
+    <SaleCardContainer ref={saleCardRef}>
       <SaleCardImageContainer>
-        <SaleCardImage src={OnyxImage} alt="salecard-image" />
-        <SaleCardImageCover />
+        <SaleCardImage src={OnyxImage} alt="salecard-image" turnOn={isTurnOn ? 1 : 0} />
+        <SaleCardImageCover turnOn={isTurnOn ? 1 : 0} />
       </SaleCardImageContainer>
       <SaleCardContent>
         <SaleCardDetails>
@@ -71,12 +102,12 @@ export const SaleCard = () => {
   );
 };
 
-const SaleCardImage = styled.img`
+const SaleCardImage = styled.img<{ turnOn: number }>`
   width: 100%;
   height: 100%;
   border-radius: 20px 0 0 20px;
   object-fit: cover;
-  filter: saturate(0);
+  filter: ${(props) => (props.turnOn === 1 ? 'none' : 'grayscale(50)')};
   transition: all linear 0.3s;
   @media screen and (max-width: 1180px) {
     flex-direction: column;
@@ -90,14 +121,14 @@ const SaleCardImage = styled.img`
   }
 `;
 
-const SaleCardImageCover = styled.div`
+const SaleCardImageCover = styled.div<{ turnOn: number }>`
   width: 100%;
   height: 100%;
   background-color: #432ad9;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.6;
+  opacity: ${(props) => (props.turnOn === 1 ? 0 : 0.6)};
   border-radius: 20px 0 0 20px;
   transition: all linear 0.3s;
   @media screen and (max-width: 1180px) {

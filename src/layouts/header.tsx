@@ -96,14 +96,13 @@ const KingpadMobileLogo = styled.img`
 const NavLink = styled.div`
   font-size: 16px;
   cursor: pointer;
-  color: #ffffff;
-  font-weight: 400;
   transition: all linear 0.6s;
+  z-index: 0;
+  font-weight: 400;
+  color: #ffffff;
   &:hover {
-    background: linear-gradient(99.95deg, #cd9bf4 8.73%, #432ad9 83.74%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #a378ec;
+    font-family: 'gotham-bold';
   }
 `;
 

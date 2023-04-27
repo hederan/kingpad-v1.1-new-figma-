@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import {
   DiscordSvg,
@@ -14,11 +15,39 @@ import { ExploreButton } from '../Button/explore';
 import { ALink } from '../ALink';
 
 export const LaunchCard = () => {
+  const saleCardRef = useRef<HTMLDivElement>(null);
+  const [scrollPos, setScrollPos] = useState(0);
+  const [isTurnOn, setTurnOn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPos(position);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const node = saleCardRef.current;
+    const windowHeight = window.innerHeight;
+    if (node === null) return;
+    const { top } = node.getBoundingClientRect();
+    const height = node.clientHeight;
+    if (top < windowHeight / 2 && top > -height) {
+      setTurnOn(true);
+    } else {
+      setTurnOn(false);
+    }
+  }, [scrollPos]);
   return (
-    <LaunchCardContainer>
+    <LaunchCardContainer ref={saleCardRef}>
       <LaunchCardImageContainer>
-        <LaunchCardImage src={SplashImage} alt="launchcard-image" />
-        <LaunchCardImageCover />
+        <LaunchCardImage src={SplashImage} alt="launchcard-image" turnOn={isTurnOn ? 1 : 0} />
+        <LaunchCardImageCover turnOn={isTurnOn ? 1 : 0} />
       </LaunchCardImageContainer>
       <LaunchCardContent>
         <LaunchCardHeader>
@@ -68,25 +97,25 @@ export const LaunchCard = () => {
   );
 };
 
-const LaunchCardImage = styled.img`
+const LaunchCardImage = styled.img<{ turnOn: number }>`
   border-radius: 20px 20px 0 0;
   width: 100%;
   height: 100%;
-  filter: grayscale(50);
+  filter: ${(props) => (props.turnOn === 1 ? 'none' : 'grayscale(50)')};
   object-fit: cover;
   @media screen and (max-width: 800px) {
     height: 250px;
   }
 `;
 
-const LaunchCardImageCover = styled.div`
+const LaunchCardImageCover = styled.div<{ turnOn: number }>`
   width: 100%;
   height: 100%;
   background-color: #432ad9;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.6;
+  opacity: ${(props) => (props.turnOn === 1 ? 0 : 0.6)};
   border-radius: 20px 20px 0 0;
   transition: all linear 0.3s;
 `;
