@@ -72,6 +72,8 @@ const LaunchCardImage = styled.img`
   border-radius: 20px 20px 0 0;
   width: 100%;
   height: 100%;
+  filter: grayscale(50);
+  object-fit: cover;
   @media screen and (max-width: 800px) {
     height: 250px;
   }
@@ -84,7 +86,7 @@ const LaunchCardImageCover = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.6;
   border-radius: 20px 20px 0 0;
   transition: all linear 0.3s;
 `;
@@ -118,6 +120,9 @@ const LaunchCardImageContainer = styled.div`
   width: 100%;
   height: 200px;
   position: relative;
+  @media screen and (max-width: 800px) {
+    height: 250px;
+  }
 `;
 
 const LaunchCardContent = styled.div`

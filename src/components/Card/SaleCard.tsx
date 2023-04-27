@@ -97,9 +97,12 @@ const SaleCardImageCover = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.6;
   border-radius: 20px 0 0 20px;
   transition: all linear 0.3s;
+  @media screen and (max-width: 1180px) {
+    border-radius: 20px 20px 0 0;
+  }
 `;
 
 const SaleCardContainer = styled.div`
@@ -128,6 +131,9 @@ const SaleCardImageContainer = styled.div`
   width: 50%;
   height: 100%;
   position: relative;
+  @media screen and (max-width: 1180px) {
+    width: 100%;
+  }
 `;
 
 const SaleCardContent = styled.div`

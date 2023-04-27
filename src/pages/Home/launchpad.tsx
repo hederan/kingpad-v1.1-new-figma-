@@ -44,26 +44,28 @@ export const LaunchPad = () => {
           <LaunchPadRocketLogo />
         </LaunchPadRocket>
       </SafePlaceWrapper>
-      <LaunchPadCard>
-        <LaunchPadCardTitle>
-          <LaunchPadCardPrimaryTitle>Launch with Kingpad</LaunchPadCardPrimaryTitle>
-          <LaunchPadCardSecondaryTitle>Make sure to go through our vetting processes </LaunchPadCardSecondaryTitle>
-        </LaunchPadCardTitle>
-        <LaunchPadCardAction>
-          <span>Apply Now</span>
-          <HandCursorImg src={HandCursorPng} alt="hand-cursor" />
-        </LaunchPadCardAction>
-        <LaunchPadCardContent>
-          <LaunchPadCardBorder />
-          <LaunchPadContentValue value="565k" title="Raised capital" />
-          <LaunchPadCardContentBorder />
-          <LaunchPadContentValue value="4.5k" title="Total participants" />
-        </LaunchPadCardContent>
-        <LaunchPadCardMobileAction>
-          <span>Apply Now</span>
-          <HandCursorImg src={HandCursorPng} alt="hand-cursor" />
-        </LaunchPadCardMobileAction>
-      </LaunchPadCard>
+      <LaunchPadWrapper>
+        <LaunchPadCard>
+          <LaunchPadCardTitle>
+            <LaunchPadCardPrimaryTitle>Launch with Kingpad</LaunchPadCardPrimaryTitle>
+            <LaunchPadCardSecondaryTitle>Make sure to go through our vetting processes </LaunchPadCardSecondaryTitle>
+          </LaunchPadCardTitle>
+          <LaunchPadCardAction>
+            <span>Apply Now</span>
+            <HandCursorImg src={HandCursorPng} alt="hand-cursor" />
+          </LaunchPadCardAction>
+          <LaunchPadCardContent>
+            <LaunchPadCardBorder />
+            <LaunchPadContentValue value="565k" title="Raised capital" />
+            <LaunchPadCardContentBorder />
+            <LaunchPadContentValue value="4.5k" title="Total participants" />
+          </LaunchPadCardContent>
+          <LaunchPadCardMobileAction>
+            <span>Apply Now</span>
+            <HandCursorImg src={HandCursorPng} alt="hand-cursor" />
+          </LaunchPadCardMobileAction>
+        </LaunchPadCard>
+      </LaunchPadWrapper>
     </LaunchPadContainer>
   );
 };
@@ -225,6 +227,15 @@ const LaunchPadRocketLogo = styled.div`
   }
 `;
 
+const LaunchPadWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 200px;
+  @media screen and (max-width: 1120px) {
+    height: 400px;
+  }
+`;
+
 const LaunchPadCard = styled.div`
   background: #060111;
   border-radius: 20px;
@@ -242,6 +253,9 @@ const LaunchPadCard = styled.div`
   @media screen and (max-width: 540px) {
     padding: 38px 30px;
   }
+  position: absolute;
+  z-index: 1;
+  width: 100%;
 `;
 
 const LaunchPadCardTitle = styled.div`
