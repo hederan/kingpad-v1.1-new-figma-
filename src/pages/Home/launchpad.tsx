@@ -51,6 +51,7 @@ export const LaunchPad = () => {
         </LaunchPadCardTitle>
         <LaunchPadCardAction>
           <span>Apply Now</span>
+          <HandCursorImg src={HandCursorPng} alt="hand-cursor" />
         </LaunchPadCardAction>
         <LaunchPadCardContent>
           <LaunchPadCardBorder />
@@ -60,6 +61,7 @@ export const LaunchPad = () => {
         </LaunchPadCardContent>
         <LaunchPadCardMobileAction>
           <span>Apply Now</span>
+          <HandCursorImg src={HandCursorPng} alt="hand-cursor" />
         </LaunchPadCardMobileAction>
       </LaunchPadCard>
     </LaunchPadContainer>
@@ -149,6 +151,7 @@ const SocialItem = styled.img`
   height: auto;
   cursor: pointer;
   color: #ffffff;
+  transition: all linear 0.2s;
   &:hover {
     filter: brightness(0) invert(1);
     color: #ffffff;
@@ -230,6 +233,7 @@ const LaunchPadCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
   @media screen and (max-width: 1120px) {
     flex-direction: column;
     gap: 25px;
@@ -280,21 +284,51 @@ const LaunchPadCardAction = styled.div`
   border-radius: 100px;
   display: inline-block;
   padding: 14px 20px;
-  border-radius: 100px;
-  cursor: url(${HandCursorPng}), auto;
+  /* cursor: url(${HandCursorPng}), auto; */
+  cursor: pointer;
   border: 1px solid transparent;
-  background: linear-gradient(#060111, #060111) padding-box,
-    linear-gradient(109.5deg, #cd9bf4 0%, #432ad9 99.79%) border-box;
   font-family: 'gotham-bold';
   font-size: 17px;
   line-height: 20px;
-  :hover {
+  position: relative;
+  background: linear-gradient(#060111, #060111) padding-box,
+    linear-gradient(109.5deg, #cd9bf4 0%, #432ad9 99.79%) border-box;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px;
     background: linear-gradient(101.12deg, #8462f6 12.74%, #432ad9 74.63%);
-    border: none;
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+  &:hover {
+    background: none;
+  }
+  &:hover img {
+    transform: translateY(-100px);
   }
   @media screen and (max-width: 1120px) {
     display: none;
   }
+`;
+
+const HandCursorImg = styled.img`
+  width: auto;
+  height: 80px;
+  transform-origin: 0 100%;
+  transition: transform 0.5s ease-out;
+  position: absolute;
+  bottom: -170px;
+  left: 40px;
 `;
 
 const LaunchPadCardBorder = styled.div`
@@ -384,12 +418,17 @@ const LaunchPadCardMobileAction = styled.div`
   font-size: 17px;
   line-height: 20px;
   border: 1px solid transparent;
+  position: relative;
   background: linear-gradient(#060111, #060111) padding-box,
     linear-gradient(109.5deg, #cd9bf4 0%, #432ad9 99.79%) border-box;
-  cursor: url(${HandCursorPng}), auto;
+  /* cursor: url(${HandCursorPng}), auto; */
+  cursor: pointer;
   :hover {
     background: linear-gradient(101.12deg, #8462f6 12.74%, #432ad9 74.63%);
     background-origin: border-box;
+  }
+  &:hover img {
+    transform: translateY(-100px);
   }
   @media screen and (max-width: 1120px) {
     display: inline-block;

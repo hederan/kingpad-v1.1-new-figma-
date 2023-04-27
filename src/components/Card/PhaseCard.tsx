@@ -34,7 +34,6 @@ export const PhaseCard = (props: { name: string }) => {
 };
 
 const PhaseCardContainer = styled.div`
-  background: linear-gradient(180deg, #432ad9 0%, #8462f6 85.42%);
   border-radius: 20px;
   width: 100%;
   height: 410px;
@@ -44,10 +43,30 @@ const PhaseCardContainer = styled.div`
   width: 100%;
   position: relative;
   color: #ffffff;
-  :hover {
-    background: linear-gradient(180deg, #ffffff 0%, #cd9bf4 85.42%);
+  position: relative;
+  background-image: linear-gradient(180deg, #432ad9 0%, #8462f6 85.42%);
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+    background-image: linear-gradient(180deg, #ffffff 0%, #cd9bf4 85.42%);
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &:hover {
     color: #060111;
   }
+
   @media screen and (max-width: 1240px) {
     flex-direction: column;
     width: 335px;

@@ -16,6 +16,7 @@ export const MintCard = () => {
         </MintCardContent>
         <MintButton>
           <span>Mint Now</span>
+          <HandCursorImg src={HandCursorPng} alt="hand-cursor" />
         </MintButton>
       </MintCardWrapper>
     </MintCardContainer>
@@ -28,6 +29,7 @@ const MintCardContainer = styled.div`
   width: 100%;
   padding: 40px;
   position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   @media screen and (max-width: 1084px) {
@@ -107,22 +109,53 @@ const SecondaryText = styled.div`
 
 const MintButton = styled.div`
   border-radius: 100px;
-  cursor: url(${HandCursorPng}), auto;
+  /* cursor: url(${HandCursorPng}), auto; */
+  cursor: pointer;
   border: 1px solid transparent;
-  background: linear-gradient(#060111, #060111) padding-box,
-    linear-gradient(109.5deg, #cd9bf4 0%, #432ad9 99.79%) border-box;
   padding: 12px 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 17px;
-  cursor: url(${HandCursorPng}), auto;
-  :hover {
+  position: relative;
+  background: linear-gradient(#060111, #060111) padding-box,
+    linear-gradient(109.5deg, #cd9bf4 0%, #432ad9 99.79%) border-box;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px;
     background: linear-gradient(101.12deg, #8462f6 12.74%, #432ad9 74.63%);
-    background-origin: border-box;
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+    transform: scale(0.99);
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+  &:hover {
+    background: none;
+    transition: all linear 0.6s;
+  }
+  &:hover img {
+    transform: translateY(-100px);
   }
   span {
     font-family: 'gotham-bold';
     line-height: 20px;
   }
+`;
+
+const HandCursorImg = styled.img`
+  width: auto;
+  height: 80px;
+  transform-origin: 0 100%;
+  transition: transform 0.5s ease-out;
+  position: absolute;
+  bottom: -170px;
 `;

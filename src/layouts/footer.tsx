@@ -2,14 +2,16 @@ import styled from 'styled-components';
 import { Container } from '../components/container/container';
 import { DiscordSvg, KingpadFooterLogo, MediumSvg, TelegramSvg, TwitterSvg, YoutubeSvg } from 'src/config/images';
 import { ALink } from 'src/components/ALink';
+import { useNavigate } from 'react-router-dom';
 
 export const Footer = () => {
+  const navigate = useNavigate();
   return (
     <Container>
       <FooterContainer>
         <FooterLinkContainer>
           <FooterExplain>
-            <FooterLogo src={KingpadFooterLogo} alt="kingpad-footer-logo" />
+            <FooterLogo src={KingpadFooterLogo} alt="kingpad-footer-logo" onClick={() => navigate('/')} />
             <ExplainContent>Launching the future through De-Fi with safety and security.</ExplainContent>
           </FooterExplain>
           <FooterLinks>
@@ -197,6 +199,13 @@ const FooterLinkNav = styled.div`
   font-size: 15px;
   line-height: 18px;
   cursor: pointer;
+  :hover {
+    background: linear-gradient(99.95deg, #cd9bf4 8.73%, #432ad9 83.74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
 `;
 
 const FooterSocialContainer = styled.div`
@@ -231,6 +240,7 @@ const FooterSocialItem = styled.img`
   width: 24px;
   height: auto;
   cursor: pointer;
+  transition: all linear 0.2s;
   &:hover {
     filter: brightness(0) invert(1);
     color: #ffffff;

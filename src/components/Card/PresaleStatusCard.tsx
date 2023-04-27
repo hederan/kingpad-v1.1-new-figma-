@@ -57,6 +57,15 @@ const CardContainer = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 16.5px;
+  @media screen and (max-width: 1240px) {
+    min-width: 335px;
+    min-height: 380px;
+  }
+
+  @media screen and (max-width: 370px) {
+    min-width: 300px;
+    min-height: 380px;
+  }
 `;
 
 const NoWalletText = styled.div`
@@ -154,6 +163,14 @@ const EndedCardContainer = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 24.5px;
+  @media screen and (max-width: 1240px) {
+    min-width: 335px;
+    min-height: 380px;
+  }
+  @media screen and (max-width: 370px) {
+    min-width: 300px;
+    min-height: 380px;
+  }
 `;
 
 const EndedLine = styled.div`

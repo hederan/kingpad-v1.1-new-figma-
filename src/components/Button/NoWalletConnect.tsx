@@ -82,22 +82,39 @@ export const NoWalletConnectButton = () => {
 };
 
 const KingButton = styled.button`
-  background: linear-gradient(283.23deg, #ffffff 25.15%, #cd9bf4 124.03%);
   border-radius: 50px;
   width: 132px;
   height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: url(${HandCursorPng}), auto;
   border: none;
   outline: none;
   font-family: 'gotham-bold';
   font-size: 15px;
   color: #060111;
+  cursor: pointer;
   text-transform: none;
-  :hover {
+  position: relative;
+  background: linear-gradient(283.23deg, #432ad9 25.15%, #cd9bf4 124.03%);
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50px;
     background: linear-gradient(283.23deg, #ffffff 25.15%, #cd9bf4 124.03%);
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+  :hover {
     color: #060111;
   }
 `;

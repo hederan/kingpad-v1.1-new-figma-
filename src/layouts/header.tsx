@@ -98,12 +98,12 @@ const NavLink = styled.div`
   cursor: pointer;
   color: #ffffff;
   font-weight: 400;
-  :hover {
+  transition: all linear 0.6s;
+  &:hover {
     background: linear-gradient(99.95deg, #cd9bf4 8.73%, #432ad9 83.74%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-weight: 700;
   }
 `;
 

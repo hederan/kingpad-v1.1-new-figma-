@@ -8,7 +8,7 @@ interface ALinkProps {
 export const ALink = (props: ALinkProps) => {
   const { link, children } = props;
   return (
-    <ALinkContainer href={link} rel="noopenner noreferrer">
+    <ALinkContainer href={link} rel="noopenner noreferrer" target="_blank">
       {children}
     </ALinkContainer>
   );

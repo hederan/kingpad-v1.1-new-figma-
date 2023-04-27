@@ -7,75 +7,132 @@ export const PresaleProgress = () => {
   return (
     <PresaleProgressContainer>
       <PresaleProgressContent>
-        <PresaleProgressInfos1>
-          <BlockchainName>
-            <BiananceImg src={BinanceLogo} alt="binance-logo" />
-            <InfoName>Blockchain</InfoName>
-          </BlockchainName>
-          <PhaseName>
-            <PresaleLogo />
-            <InfoName>Phase</InfoName>
-          </PhaseName>
-          <PresaleDuration>
-            <PresaleTime>
-              <Timer>
-                <TimeValue>12</TimeValue>
-                <TimeUnit>H</TimeUnit>
-              </Timer>
-              <TimeLine />
-              <Timer>
-                <TimeValue>30</TimeValue>
-                <TimeUnit>H</TimeUnit>
-              </Timer>
-            </PresaleTime>
-            <InfoName>Kingstarter duration</InfoName>
-          </PresaleDuration>
-          <PresaleStatus>
-            <Status name="upcoming" />
-            <InfoName>Status</InfoName>
-          </PresaleStatus>
-        </PresaleProgressInfos1>
+        <PresaleProgressInfos1 />
         <BorderLine />
-        <PresaleProgressInfos2>
-          <PresaleValueContainer>
-            <PresaleValue value={900} currency={'BNB'} name="Soft cap" />
-            <PresaleValue value={1800} currency={'BNB'} name="Soft cap" />
-            <PresaleValue value={0.1} currency={'BNB'} name="Soft cap" />
-            <PresaleValue value={4} currency={'BNB'} name="Soft cap" />
-          </PresaleValueContainer>
-          <PresaleDuration>
-            <PresaleTime>
-              <Timer>
-                <TimeValue>01</TimeValue>
-                <TimeUnit>D</TimeUnit>
-              </Timer>
-              <TimeLine />
-              <Timer>
-                <TimeValue>12</TimeValue>
-                <TimeUnit>H</TimeUnit>
-              </Timer>
-              <TimeLine />
-              <Timer>
-                <TimeValue>22</TimeValue>
-                <TimeUnit>M</TimeUnit>
-              </Timer>
-              <TimeLine />
-              <Timer>
-                <TimeValue>35</TimeValue>
-                <TimeUnit>S</TimeUnit>
-              </Timer>
-            </PresaleTime>
-            <InfoName>Starts In</InfoName>
-          </PresaleDuration>
-        </PresaleProgressInfos2>
-        <BorderLine />
-        <PresaleProgressInfos3>
-          <ProgressBar value={50} />
-          <PresaleValue value={900} currency={'BNB'} name="Raised" />
-        </PresaleProgressInfos3>
+        <PresaleProgressWrapper>
+          <PresaleProgressInfoWrapper>
+            <PresaleProgressInfos2 />
+            <BorderLine />
+            <PresaleProgressInfos3 />
+          </PresaleProgressInfoWrapper>
+          <TabletWrapper>
+            <PresaleProgressStatusCard />
+          </TabletWrapper>
+        </PresaleProgressWrapper>
       </PresaleProgressContent>
-      <EndedCard />
+      <DesktopWrapper>
+        <PresaleProgressStatusCard />
+      </DesktopWrapper>
     </PresaleProgressContainer>
+  );
+};
+
+const PresaleProgressInfos1 = () => {
+  return (
+    <PresaleProgressInfos1Container>
+      <BlockchainName>
+        <BiananceImg src={BinanceLogo} alt="binance-logo" />
+        <InfoName>Blockchain</InfoName>
+      </BlockchainName>
+      <PhaseName>
+        <PresaleLogo />
+        <InfoName>Phase</InfoName>
+      </PhaseName>
+      <DesktopMobileWrapper>
+        <PresaleDurationTime />
+      </DesktopMobileWrapper>
+      <PresaleStatus>
+        <Status name="upcoming" />
+        <InfoName>Status</InfoName>
+      </PresaleStatus>
+    </PresaleProgressInfos1Container>
+  );
+};
+
+const PresaleProgressInfos2 = () => {
+  return (
+    <PresaleProgressInfos2Container>
+      <PresaleValueContainer>
+        <MobileWrapper>
+          <PresaleDurationTime />
+        </MobileWrapper>
+        <PresaleValue value={900} currency={'BNB'} name="Soft cap" />
+        <PresaleValue value={1800} currency={'BNB'} name="Soft cap" />
+        <DesktopMobileWrapper>
+          <PresaleValue value={0.1} currency={'BNB'} name="Soft cap" />
+        </DesktopMobileWrapper>
+        <DesktopWrapper>
+          <PresaleValue value={4} currency={'BNB'} name="Soft cap" />
+        </DesktopWrapper>
+      </PresaleValueContainer>
+      <TabletWrapper style={{ width: '100%' }}>
+        <BorderLine />
+      </TabletWrapper>
+      <PresaleDuration>
+        <MobileWrapper>
+          <PresaleValue value={0.1} currency={'BNB'} name="Soft cap" />
+        </MobileWrapper>
+        <TabletWrapper>
+          <PresaleValue value={4} currency={'BNB'} name="Soft cap" />
+        </TabletWrapper>
+        <PresaleDurationContainer>
+          <PresaleTime>
+            <Timer>
+              <TimeValue>01</TimeValue>
+              <TimeUnit>D</TimeUnit>
+            </Timer>
+            <TimeLine />
+            <Timer>
+              <TimeValue>12</TimeValue>
+              <TimeUnit>H</TimeUnit>
+            </Timer>
+            <TimeLine />
+            <Timer>
+              <TimeValue>22</TimeValue>
+              <TimeUnit>M</TimeUnit>
+            </Timer>
+            <TimeLine />
+            <Timer>
+              <TimeValue>35</TimeValue>
+              <TimeUnit>S</TimeUnit>
+            </Timer>
+          </PresaleTime>
+          <InfoName>Starts In</InfoName>
+        </PresaleDurationContainer>
+      </PresaleDuration>
+    </PresaleProgressInfos2Container>
+  );
+};
+
+const PresaleProgressInfos3 = () => {
+  return (
+    <PresaleProgressInfos3Container>
+      <ProgressBar value={50} />
+      <PresaleValue value={900} currency={'BNB'} name="Raised" />
+    </PresaleProgressInfos3Container>
+  );
+};
+
+const PresaleProgressStatusCard = () => {
+  return <EndedCard />;
+};
+
+const PresaleDurationTime = () => {
+  return (
+    <PresaleDurationContainer>
+      <PresaleTime>
+        <Timer>
+          <TimeValue>12</TimeValue>
+          <TimeUnit>H</TimeUnit>
+        </Timer>
+        <TimeLine />
+        <Timer>
+          <TimeValue>30</TimeValue>
+          <TimeUnit>H</TimeUnit>
+        </Timer>
+      </PresaleTime>
+      <InfoName>Kingstarter duration</InfoName>
+    </PresaleDurationContainer>
   );
 };
 
@@ -92,7 +149,7 @@ const PresaleProgressContent = styled.div`
   width: 100%;
 `;
 
-const PresaleProgressInfos1 = styled.div`
+const PresaleProgressInfos1Container = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -143,6 +200,9 @@ const PresaleLogoContainer = styled.div`
   font-size: 15px;
   line-height: 18px;
   text-align: center;
+  @media screen and (max-width: 540px) {
+    font-size: 13px;
+  }
 `;
 
 const StarImg = styled.img`
@@ -152,9 +212,11 @@ const StarImg = styled.img`
 
 const PresaleDuration = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  @media screen and (max-width: 1240px) {
+    width: 100%;
+  }
 `;
 
 const PresaleTime = styled.div`
@@ -173,6 +235,10 @@ const TimeValue = styled.div`
   font-family: 'gotham-bold';
   font-size: 21px;
   line-height: 25px;
+  @media screen and (max-width: 540px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 `;
 
 const TimeUnit = styled.div`
@@ -222,16 +288,26 @@ const StatusBadge = styled.div<{ name: string }>`
     props.name === 'upcoming' ? '#FF9B52' : props.name === 'ended' ? '#ff4056' : '#00fe9a'};
 `;
 
-const PresaleProgressInfos2 = styled.div`
+const PresaleProgressInfos2Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 1240px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
 `;
 
 const PresaleValueContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 80px;
+  @media screen and (max-width: 1240px) {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
 `;
 
 interface PresaleValueProps {
@@ -262,6 +338,10 @@ const PresaleNumberValue = styled.div`
   font-family: 'gotham-bold';
   font-size: 21px;
   line-height: 25px;
+  @media screen and (max-width: 540px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 `;
 
 const PresaleCurrency = styled.div`
@@ -277,10 +357,14 @@ const PresaleValueName = styled.div`
   color: #cd9bf4;
 `;
 
-const PresaleProgressInfos3 = styled.div`
+const PresaleProgressInfos3Container = styled.div`
   display: flex;
   align-items: center;
   gap: 148px;
+  @media screen and (max-width: 1240px) {
+    justify-content: space-between;
+    gap: 0;
+  }
 `;
 
 const ProgressBar = (props: { value: number }) => {
@@ -297,10 +381,65 @@ const ProgressBarContainer = styled.div`
   border-radius: 50px;
   padding: 15px 13px;
   width: 375px;
+  @media screen and (max-width: 1240px) {
+    width: 225px;
+    padding: 11px 9px;
+  }
 `;
 
 const ProgressValueBar = styled.div<{ value: number }>`
   border: 5px solid #52ffac;
   border-radius: 10px;
   width: ${(props) => props.value}%;
+`;
+
+const PresaleProgressWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 37.5px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const DesktopWrapper = styled.div`
+  display: block;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
+`;
+
+const TabletWrapper = styled.div`
+  display: none;
+  @media screen and (max-width: 1240px) {
+    display: block;
+  }
+`;
+
+const DesktopMobileWrapper = styled.div`
+  display: block;
+  @media screen and (max-width: 540px) {
+    display: none;
+  }
+`;
+
+const MobileWrapper = styled.div`
+  display: none;
+  @media screen and (max-width: 540px) {
+    display: block;
+  }
+`;
+
+const PresaleDurationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+`;
+
+const PresaleProgressInfoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
 `;

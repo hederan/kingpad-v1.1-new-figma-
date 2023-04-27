@@ -19,7 +19,7 @@ import {
   InHouseBadge,
   KYCBadge
 } from 'src/components/Badge/Authentication';
-import { BorderLine, MobileBorderLine } from 'src/components/Line/BorderLine';
+import { MobileBorderLine } from 'src/components/Line/BorderLine';
 
 export const PresaleHeader = () => {
   return (
@@ -137,6 +137,10 @@ const PresaleSocialLinks = styled.div`
 const PresaleSocialLink = styled.img`
   width: auto;
   height: 14px;
+  &:hover {
+    filter: brightness(0) invert(1);
+    color: #ffffff;
+  }
 `;
 
 const PresaleDescription = styled.div`
@@ -181,7 +185,7 @@ const PresaleBadgeContainer = styled.div`
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  width: 365px;
+  width: 375px;
   @media screen and (max-width: 1064px) {
     width: 280px;
   }

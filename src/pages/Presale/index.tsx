@@ -3,6 +3,7 @@ import { PresaleBanner } from './PresaleBanner';
 import { PresaleHeader } from './PresaleHeader';
 import { PresaleProgress } from './PresaleProgress';
 import { BorderLine } from 'src/components/Line/BorderLine';
+import { PresaleInfos } from './PresaleInfos';
 
 export const PresalePage = () => {
   return (
@@ -11,6 +12,8 @@ export const PresalePage = () => {
       <PresaleHeader />
       <BorderLine />
       <PresaleProgress />
+      <BorderLine />
+      <PresaleInfos />
       <BorderLine />
     </PresalePageContainer>
   );
