@@ -45,5 +45,11 @@ import HandCursorPng from '../assets/png/hand-cursor.png'
 import KYCLogoSvg from '../assets/svg/logo/KYC-logo.svg'
 import CertikLogoSvg from '../assets/svg/logo/Certik-logo.svg'
 
-export { KingpadLogoSvg, KingpadLogoGreySvg, KingpadIconSvg, KingpadGrey, KingpadFooterLogo, TwitterSvg, TelegramSvg, YoutubeSvg, MediumSvg, DiscordSvg, RocketLogo, BinanceLogo, EthereumLogo, ArbitrumLogo, PolygonLogo, BlockchainLogo1, BlockchainLogo2, BlockchainLogo3, MarioImage, OnyxImage, WebsiteSvg, FacebookSvg, InstagramSvg, KingpassPng, SplashImage, RocketUpPng, TelegramIcon, DiamondSvg, StarSvg, KingstarterPng, KingsalePng, KYCLogoSvg, CertikLogoSvg, KingpassLogoSvg, HandCursorPng
+// Service List Icons
+import RocketIconSvg from '../assets/svg/icons/Rocket-icon.svg'
+import LockIconSvg from '../assets/svg/icons/Lock-icon.svg'
+import AuditIconSvg from '../assets/svg/icons/Audit-icon.svg'
+import KycIconSvg from '../assets/svg/icons/Kyc-icon.svg'
+
+export { KingpadLogoSvg, KingpadLogoGreySvg, KingpadIconSvg, KingpadGrey, KingpadFooterLogo, TwitterSvg, TelegramSvg, YoutubeSvg, MediumSvg, DiscordSvg, RocketLogo, BinanceLogo, EthereumLogo, ArbitrumLogo, PolygonLogo, BlockchainLogo1, BlockchainLogo2, BlockchainLogo3, MarioImage, OnyxImage, WebsiteSvg, FacebookSvg, InstagramSvg, KingpassPng, SplashImage, RocketUpPng, TelegramIcon, DiamondSvg, StarSvg, KingstarterPng, KingsalePng, KYCLogoSvg, CertikLogoSvg, KingpassLogoSvg, HandCursorPng, RocketIconSvg, LockIconSvg, AuditIconSvg, KycIconSvg
  }

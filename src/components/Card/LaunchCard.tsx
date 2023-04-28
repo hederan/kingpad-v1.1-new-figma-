@@ -117,7 +117,7 @@ const LaunchCardImageCover = styled.div<{ turnOn: number }>`
   left: 0;
   opacity: ${(props) => (props.turnOn === 1 ? 0 : 0.6)};
   border-radius: 20px 20px 0 0;
-  transition: all linear 0.3s;
+  transition: all linear 0.6s;
 `;
 
 const LaunchCardContainer = styled.div`
@@ -142,7 +142,7 @@ const LaunchCardContainer = styled.div`
   &:hover ${LaunchCardImageCover} {
     opacity: 0;
   }
-  transition: all linear 0.3s;
+  transition: all linear 0.6s;
 `;
 
 const LaunchCardImageContainer = styled.div`

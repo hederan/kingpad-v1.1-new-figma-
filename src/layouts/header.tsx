@@ -7,6 +7,7 @@ import { Container } from 'src/components/container/container';
 import { ALink } from 'src/components/ALink';
 import { WalletConnectButton } from 'src/components/Button/WalletConnectButton';
 import { useNavigate } from 'react-router-dom';
+import { ServiceListCard } from 'src/components/Card/ServiceListCard';
 
 export const Header = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -18,7 +19,10 @@ export const Header = () => {
           <KingpadLogo src={KingpadLogoSvg} alt="kingpad-logo" onClick={() => navigate('/')} />
           <KingpadMobileLogo src={KingpadIconSvg} alt="kingpad-mobile-logo" />
           <NavLinkContainer>
-            <NavLink>Service</NavLink>
+            <NavLinkWrapper>
+              <NavLink>Service</NavLink>
+              <ServiceListCard />
+            </NavLinkWrapper>
             <NavLink>About</NavLink>
             <ALink link="https://kingpass.finance">
               <NavLink>Kingpass</NavLink>
@@ -113,5 +117,13 @@ const MobileNavbar = styled.div`
   font-family: 'gotham-bold';
   @media screen and (max-width: 960px) {
     display: block;
+  }
+`;
+
+const NavLinkWrapper = styled.div`
+  position: relative;
+  :hover > div {
+    opacity: 1;
+    visibility: visible;
   }
 `;

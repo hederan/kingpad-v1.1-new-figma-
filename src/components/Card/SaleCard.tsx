@@ -108,7 +108,7 @@ const SaleCardImage = styled.img<{ turnOn: number }>`
   border-radius: 20px 0 0 20px;
   object-fit: cover;
   filter: ${(props) => (props.turnOn === 1 ? 'none' : 'grayscale(50)')};
-  transition: all linear 0.3s;
+  transition: all linear 0.6s;
   @media screen and (max-width: 1180px) {
     flex-direction: column;
     height: 250px;
@@ -130,7 +130,7 @@ const SaleCardImageCover = styled.div<{ turnOn: number }>`
   left: 0;
   opacity: ${(props) => (props.turnOn === 1 ? 0 : 0.6)};
   border-radius: 20px 0 0 20px;
-  transition: all linear 0.3s;
+  transition: all linear 0.6s;
   @media screen and (max-width: 1180px) {
     border-radius: 20px 20px 0 0;
   }
@@ -155,7 +155,7 @@ const SaleCardContainer = styled.div`
   &:hover ${SaleCardImageCover} {
     opacity: 0;
   }
-  transition: all linear 0.3s;
+  transition: all linear 0.6s;
 `;
 
 const SaleCardImageContainer = styled.div`

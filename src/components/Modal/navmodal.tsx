@@ -1,6 +1,10 @@
 import styled from 'styled-components';
-import { KingpadGrey, KingpadIconSvg, KingpadLogoGreySvg } from 'src/config/images';
+import { KingpadGrey, KingpadLogoGreySvg } from 'src/config/images';
 import { MdClose } from 'react-icons/md';
+import { TbChevronDown, TbChevronUp } from 'react-icons/tb';
+import { useState } from 'react';
+import { MobileServiceList, ServiceList } from '../Card/ServiceListCard';
+import { useNavigate } from 'react-router-dom';
 
 interface NavModalProps {
   isState: boolean;
@@ -13,16 +17,37 @@ interface CloseButtonProps {
 
 export const NavModal = (props: NavModalProps) => {
   const { isState, handleState } = props;
+  const [isServiceOpen, setServiceOpen] = useState(false);
+  const navigate = useNavigate();
   return (
     <NavModalContainer style={{ visibility: isState ? 'visible' : 'hidden', opacity: isState ? 1 : 0 }}>
       <NavModalWrapper>
         <NavModalHeader>
-          <KingpadLogo src={KingpadLogoGreySvg} alt="kingpad-logo" />
-          <KingpadMobileLogo src={KingpadGrey} alt="kingpad-mobile-logo" />
+          <KingpadLogo
+            src={KingpadLogoGreySvg}
+            alt="kingpad-logo"
+            onClick={() => {
+              handleState(false);
+              navigate('/');
+            }}
+          />
+          <KingpadMobileLogo
+            src={KingpadGrey}
+            alt="kingpad-mobile-logo"
+            onClick={() => {
+              handleState(false);
+              navigate('/');
+            }}
+          />
           <CloseButton setState={handleState} />
         </NavModalHeader>
         <NavModalLinks>
-          <NavModalLink>Service</NavModalLink>
+          <NavModalLinkContainer>
+            <NavModalLink onClick={() => setServiceOpen(!isServiceOpen)}>
+              Service <NavDownIcon serviceopen={isServiceOpen ? 1 : 0} />
+            </NavModalLink>
+            <MobileServiceList serviceopen={isServiceOpen ? 1 : 0} />
+          </NavModalLinkContainer>
           <NavModalLink>About</NavModalLink>
           <NavModalLink onClick={() => window.open('https://kingpass.finance')}>Kingpass</NavModalLink>
           <NavModalLink onClick={() => window.open('https://kingworld.finance')}>$KING</NavModalLink>
@@ -100,6 +125,7 @@ const KingpadMobileLogo = styled.img`
   width: auto;
   @media screen and (max-width: 420px) {
     display: block;
+    cursor: pointer;
   }
 `;
 
@@ -115,4 +141,22 @@ const NavModalLink = styled.div`
   font-size: 25px;
   color: #ffffff;
   line-height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all linear 0.6s;
+  width: 130px;
+  cursor: pointer;
+`;
+
+const NavModalLinkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all linear 0.6s;
+`;
+
+const NavDownIcon = styled(TbChevronDown)<{ serviceopen: number }>`
+  transform: ${(props) => (props.serviceopen === 1 ? 'rotate(180deg)' : 'rotate(0)')};
+  transition: all linear 0.2s;
 `;
