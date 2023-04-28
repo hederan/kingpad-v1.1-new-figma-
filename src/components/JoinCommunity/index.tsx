@@ -75,7 +75,6 @@ const JoinTelegram = styled.div`
   }
   &:hover {
     background: none;
-    transform: translateY(-6px);
   }
   &:hover div {
     transform: translateY(-120px);
