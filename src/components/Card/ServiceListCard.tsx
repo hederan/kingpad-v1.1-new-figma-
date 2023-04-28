@@ -53,7 +53,7 @@ export const ServiceList = (props: { icon: string; name: string; soon?: boolean;
 };
 
 const ServiceListName = styled.div`
-  font-family: 'gotham-bold';
+  font-weight: 500;
   font-size: 15px;
   line-height: 18px;
   color: #060111;

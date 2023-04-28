@@ -106,7 +106,7 @@ const NavLink = styled.div`
   color: #ffffff;
   &:hover {
     color: #a378ec;
-    font-family: 'gotham-bold';
+    font-weight: 800;
   }
 `;
 

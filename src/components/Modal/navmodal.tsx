@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { KingpadGrey, KingpadLogoGreySvg } from 'src/config/images';
 import { MdClose } from 'react-icons/md';
-import { TbChevronDown, TbChevronUp } from 'react-icons/tb';
+import { TbChevronDown } from 'react-icons/tb';
 import { useState } from 'react';
-import { MobileServiceList, ServiceList } from '../Card/ServiceListCard';
+import { MobileServiceList } from '../Card/ServiceListCard';
 import { useNavigate } from 'react-router-dom';
 
 interface NavModalProps {
