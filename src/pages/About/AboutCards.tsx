@@ -58,6 +58,8 @@ const AboutCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
   @media screen and (max-width: 1240px) {
     flex-direction: row;
     width: 100%;
@@ -70,8 +72,23 @@ const AboutCardContainer = styled.div`
     padding: 33px;
     flex-direction: column;
   }
-  &:hover {
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
     background: linear-gradient(315deg, #ffffff 0%, #cd9bf4 100%);
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+  &:hover {
     color: #000000;
   }
 `;
