@@ -29,7 +29,7 @@ export const CardBox = () => {
   );
 };
 
-const CardBoxBackground = styled.div`
+export const CardBoxBackground = styled.div`
   background-color: #432ad9;
   background: #432ad9;
   filter: blur(220.362px);
@@ -40,6 +40,7 @@ const CardBoxBackground = styled.div`
   position: absolute;
   height: 1200px;
   width: 100%;
+  z-index: -1;
   @media screen and (max-width: 1200px) {
     height: 1500px;
   }

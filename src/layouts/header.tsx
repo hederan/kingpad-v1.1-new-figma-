@@ -23,7 +23,7 @@ export const Header = () => {
               <NavLink>Service</NavLink>
               <ServiceListCard />
             </NavLinkWrapper>
-            <NavLink>About</NavLink>
+            <NavLink onClick={() => navigate('/about')}>About</NavLink>
             <ALink link="https://kingpass.finance">
               <NavLink>Kingpass</NavLink>
             </ALink>
