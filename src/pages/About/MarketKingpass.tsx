@@ -23,7 +23,7 @@ export const MarketKingpass = () => {
           <KingCurrncyPrimaryText>$KING</KingCurrncyPrimaryText>
           <KingCurrencySecondaryText>Our Currency as a propellant</KingCurrencySecondaryText>
           <KingCurrencyLogos>
-            <ALink link="">
+            <ALink link="https://pancakeswap.finance/swap?outputCurrency=0x74f08aF7528Ffb751e3A435ddD779b5C4565e684">
               <KingCurrencyLogo src={PancakeswapLogoSvg} alt="currency-logo" />
             </ALink>
             <ALink link="https://coinmarketcap.com/currencies/king-finance/">
@@ -32,7 +32,7 @@ export const MarketKingpass = () => {
             <ALink link="https://www.coingecko.com/en/coins/king-finance">
               <KingCurrencyLogo src={CoingeckoLogoSvg} alt="currency-logo" />
             </ALink>
-            <ALink link="">
+            <ALink link="https://www.dextools.io/app/en/bnb/pair-explorer/0x236bb106fe084f11bce2c327cbaeafa5e104c783">
               <KingCurrencyLogo src={DextoolLogoSvg} alt="currency-logo" />
             </ALink>
             <ALink link="https://www.certik.com/projects/king">
