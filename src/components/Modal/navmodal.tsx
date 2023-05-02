@@ -48,7 +48,14 @@ export const NavModal = (props: NavModalProps) => {
             </NavModalLink>
             <MobileServiceList serviceopen={isServiceOpen ? 1 : 0} />
           </NavModalLinkContainer>
-          <NavModalLink onClick={() => navigate('/about')}>About</NavModalLink>
+          <NavModalLink
+            onClick={() => {
+              handleState(false);
+              navigate('/about');
+            }}
+          >
+            About
+          </NavModalLink>
           <NavModalLink onClick={() => window.open('https://kingpass.finance')}>Kingpass</NavModalLink>
           <NavModalLink onClick={() => window.open('https://kingworld.finance')}>$KING</NavModalLink>
         </NavModalLinks>
