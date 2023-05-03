@@ -3,6 +3,10 @@ export const PUBLIC_ROUTES = {
   home: '/home',
   presale: '/presale',
   about: '/about',
+  audit: '/audit',
+  kyc: '/kyc',
+  privacy: '/privacy',
+  terms: '/terms',
   error404: '/error404'
 };
 

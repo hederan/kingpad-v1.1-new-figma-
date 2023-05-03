@@ -67,4 +67,9 @@ import DextoolLogoSvg from '../assets/svg/logo/dextool-logo.svg'
 import AssureLogoSvg from '../assets/svg/logo/assure-logo.svg'
 import KingTokenPng from '../assets/png/king-token.png'
 
-export { KingpadLogoSvg, KingpadLogoGreySvg, KingpadIconSvg, KingpadGrey, KingpadFooterLogo, TwitterSvg, TelegramSvg, YoutubeSvg, MediumSvg, DiscordSvg, RocketLogo, BinanceLogo, EthereumLogo, ArbitrumLogo, PolygonLogo, BlockchainLogo1, BlockchainLogo2, BlockchainLogo3, MarioImage, OnyxImage, WebsiteSvg, FacebookSvg, InstagramSvg, KingpassPng, SplashImage, RocketUpPng, TelegramIcon, DiamondSvg, StarSvg, KingstarterPng, KingsalePng, KYCLogoSvg, CertikLogoSvg, KingpassLogoSvg, HandCursorPng, RocketIconSvg, LockIconSvg, AuditIconSvg, KycIconSvg ,MarketKingPng, CurveArrowLongSvg, CurveArrowSmallSvg, StarightArrowLongSvg, StarightArrowSmallSvg, SafePng, ArrowBoardPng, CupPng, PancakeswapLogoSvg, CoinmarketcaplogoSvg, CoingeckoLogoSvg, DextoolLogoSvg, AssureLogoSvg, KingTokenPng }
+// Audit Page
+import CertikBannerPng from '../assets/png/certik-banner.png'
+import KycBannerPng from '../assets/png/kyc-banner.png'
+import AssureDefiLogoSvg from '../assets/svg/logo/assure-defi.svg'
+
+export { KingpadLogoSvg, KingpadLogoGreySvg, KingpadIconSvg, KingpadGrey, KingpadFooterLogo, TwitterSvg, TelegramSvg, YoutubeSvg, MediumSvg, DiscordSvg, RocketLogo, BinanceLogo, EthereumLogo, ArbitrumLogo, PolygonLogo, BlockchainLogo1, BlockchainLogo2, BlockchainLogo3, MarioImage, OnyxImage, WebsiteSvg, FacebookSvg, InstagramSvg, KingpassPng, SplashImage, RocketUpPng, TelegramIcon, DiamondSvg, StarSvg, KingstarterPng, KingsalePng, KYCLogoSvg, CertikLogoSvg, KingpassLogoSvg, HandCursorPng, RocketIconSvg, LockIconSvg, AuditIconSvg, KycIconSvg ,MarketKingPng, CurveArrowLongSvg, CurveArrowSmallSvg, StarightArrowLongSvg, StarightArrowSmallSvg, SafePng, ArrowBoardPng, CupPng, PancakeswapLogoSvg, CoinmarketcaplogoSvg, CoingeckoLogoSvg, DextoolLogoSvg, AssureLogoSvg, KingTokenPng, CertikBannerPng, KycBannerPng, AssureDefiLogoSvg }

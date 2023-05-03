@@ -11,7 +11,14 @@ export const Footer = () => {
       <FooterContainer>
         <FooterLinkContainer>
           <FooterExplain>
-            <FooterLogo src={KingpadFooterLogo} alt="kingpad-footer-logo" onClick={() => navigate('/')} />
+            <FooterLogo
+              src={KingpadFooterLogo}
+              alt="kingpad-footer-logo"
+              onClick={() => {
+                navigate('/');
+                window.scrollTo(0, 0);
+              }}
+            />
             <ExplainContent>Launching the future through De-Fi with safety and security.</ExplainContent>
           </FooterExplain>
           <FooterLinks>
@@ -20,8 +27,22 @@ export const Footer = () => {
                 <FooterLinkTitle>About</FooterLinkTitle>
                 <FooterLinkNavs>
                   <FooterLinkNav>Launch with us</FooterLinkNav>
-                  <FooterLinkNav>Audit</FooterLinkNav>
-                  <FooterLinkNav>KYC</FooterLinkNav>
+                  <FooterLinkNav
+                    onClick={() => {
+                      navigate('/audit');
+                      window.scrollTo(0, 0);
+                    }}
+                  >
+                    Audit
+                  </FooterLinkNav>
+                  <FooterLinkNav
+                    onClick={() => {
+                      navigate('/kyc');
+                      window.scrollTo(0, 0);
+                    }}
+                  >
+                    KYC
+                  </FooterLinkNav>
                   <ALink link="https://king-finance.gitbook.io/king-whitepaper">
                     <FooterLinkNav>Docs</FooterLinkNav>
                   </ALink>
@@ -30,7 +51,14 @@ export const Footer = () => {
               <FooterLink>
                 <FooterLinkTitle>Company</FooterLinkTitle>
                 <FooterLinkNavs>
-                  <FooterLinkNav>About us</FooterLinkNav>
+                  <FooterLinkNav
+                    onClick={() => {
+                      navigate('/about');
+                      window.scrollTo(0, 0);
+                    }}
+                  >
+                    About us
+                  </FooterLinkNav>
                   <FooterLinkNav>Contact us</FooterLinkNav>
                 </FooterLinkNavs>
               </FooterLink>
@@ -53,8 +81,22 @@ export const Footer = () => {
               <FooterLink>
                 <FooterLinkTitle>Legal</FooterLinkTitle>
                 <FooterLinkNavs>
-                  <FooterLinkNav>Terms of Use</FooterLinkNav>
-                  <FooterLinkNav>Privacy Policy</FooterLinkNav>
+                  <FooterLinkNav
+                    onClick={() => {
+                      navigate('/terms');
+                      window.scrollTo(0, 0);
+                    }}
+                  >
+                    Terms of Use
+                  </FooterLinkNav>
+                  <FooterLinkNav
+                    onClick={() => {
+                      navigate('/privacy');
+                      window.scrollTo(0, 0);
+                    }}
+                  >
+                    Privacy Policy
+                  </FooterLinkNav>
                 </FooterLinkNavs>
               </FooterLink>
             </FooterLinksWrapper>
