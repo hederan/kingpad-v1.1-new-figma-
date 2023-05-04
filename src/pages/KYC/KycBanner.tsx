@@ -72,9 +72,7 @@ const KycBannerImageContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 50px;
-  @media screen and (max-width: 1120px) {
-    padding-top: 30px;
-  }
+  padding-top: 30px;
 `;
 
 const KycBannerImg = styled.img`
