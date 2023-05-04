@@ -38,7 +38,7 @@ const AuditContentContainer = styled.div`
   font-weight: 400;
   font-size: 13px;
   line-height: 20px;
-  padding: 120px 80px;
+  padding: 80px 40px;
   @media screen and (max-width: 1120px) {
     padding: 120px 0;
     gap: 65px;
@@ -48,7 +48,6 @@ const AuditContentContainer = styled.div`
     gap: 0;
     padding: 65px 0;
   }
-
   p {
     width: 100%;
   }

@@ -1,5 +1,5 @@
 import { KingpadFooterLogo, AssureDefiLogoSvg, KycBannerPng } from 'src/config/images';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const KycBanner = () => {
   return (
@@ -22,11 +22,15 @@ export const KycBanner = () => {
 
 const KycBannerContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   gap: 42px;
   position: relative;
+  padding-top: 90px;
   @media screen and (max-width: 1120px) {
     flex-direction: column-reverse;
+    padding-top: 60px;
+    align-items: center;
   }
 `;
 
@@ -85,9 +89,22 @@ const KycBannerLogoContainer = styled.div`
   position: relative;
 `;
 
+const floaty = keyframes`
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+`;
+
 const KycBannerLogo = styled.img`
   height: 380px;
   width: auto;
+  animation: ${floaty} 2s infinite;
   @media screen and (max-width: 768px) {
     height: 260px;
   }

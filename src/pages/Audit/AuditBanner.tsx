@@ -1,5 +1,5 @@
-import { KingpadFooterLogo, CertikLogoSvg, CertikBannerPng } from 'src/config/images';
-import styled from 'styled-components';
+import { KingpadFooterLogo, CertikBannerLogoSvg, CertikBannerPng } from 'src/config/images';
+import styled, { keyframes } from 'styled-components';
 
 export const AuditBanner = () => {
   return (
@@ -9,7 +9,7 @@ export const AuditBanner = () => {
         <AuditBannerText>Elite auditing services</AuditBannerText>
         <AuditBannerImageContainer>
           <AuditBannerImg src={KingpadFooterLogo} alt="kingpad-logo" />
-          <AuditBannerImg src={CertikLogoSvg} alt="certik-logo" />
+          <AuditBannerImg src={CertikBannerLogoSvg} alt="certik-logo" />
         </AuditBannerImageContainer>
       </AuditBannerService>
       <AuditBannerLogoContainer>
@@ -22,11 +22,15 @@ export const AuditBanner = () => {
 
 const AuditBannerContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   gap: 42px;
   position: relative;
+  padding-top: 90px;
   @media screen and (max-width: 1120px) {
     flex-direction: column-reverse;
+    padding-top: 60px;
+    align-items: center;
   }
 `;
 
@@ -83,9 +87,22 @@ const AuditBannerLogoContainer = styled.div`
   position: relative;
 `;
 
+const floaty = keyframes`
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+`;
+
 const AuditBannerLogo = styled.img`
   height: 380px;
   width: auto;
+  animation: ${floaty} 2s infinite;
   @media screen and (max-width: 768px) {
     height: 260px;
   }

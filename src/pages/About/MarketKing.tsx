@@ -1,5 +1,5 @@
 import { CurveArrowLongSvg, MarketKingPng, StarightArrowLongSvg, StarightArrowSmallSvg } from 'src/config/images';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const MarketKing = () => {
   return (
@@ -144,9 +144,22 @@ const BlueFilterBackground = styled.div`
   }
 `;
 
+const floaty = keyframes`
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+`;
+
 const DesktopMarketKingImg = styled.img`
   height: 560px;
   width: auto;
+  animation: ${floaty} 2s infinite;
   @media screen and (max-width: 1240px) {
     display: none;
   }
@@ -156,6 +169,7 @@ const MobileMarketKingImg = styled.img`
   height: 420px;
   width: auto;
   display: none;
+  animation: ${floaty} 2s infinite;
   @media screen and (max-width: 1240px) {
     display: block;
   }
