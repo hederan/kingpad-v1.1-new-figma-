@@ -35,10 +35,11 @@ const MintCardContainer = styled.div`
   align-items: center;
   @media screen and (max-width: 1084px) {
     gap: 10px;
-    padding-top: 30px;
+    padding: 30px;
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    padding: 30px 0 0 0;
   }
 `;
 
