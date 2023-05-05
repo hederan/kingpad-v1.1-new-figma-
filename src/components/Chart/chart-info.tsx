@@ -17,6 +17,9 @@ const InfoContainer = styled.div`
   gap: 3px;
   position: absolute;
   bottom: -20px;
+  @media screen and (max-width: 540px) {
+    bottom: 0px;
+  }
 `;
 
 const TokenInfo = (props: { color: string; label: string }) => {

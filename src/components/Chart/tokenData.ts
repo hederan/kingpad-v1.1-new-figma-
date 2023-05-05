@@ -19,13 +19,13 @@ export const tokenData: tokenDataProps[] = [
       color: '#C6B8F4'
     },
     {
-      id: '0',
+      id: '2',
       label: 'Private Sale',
       value: 35,
       color: '#FFB765'
     },
     {
-      id: '0',
+      id: '3',
       label: 'Seed Funding Round',
       value: 35,
       color: '#FEE699'

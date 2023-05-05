@@ -30,10 +30,8 @@ export const PresaleInfos = () => {
         <VestingContainer>
           <SalesInfoTitle>Vesting</SalesInfoTitle>
           <VestingGroupContainer>
-            {/* <VestingItemGroup> */}
             <VestingItem value={30} unit="%" text="First release Amount" />
             <VestingItem value={0} unit="Days" text="Vesting period each cycle" />
-            {/* </VestingItemGroup> */}
             <VestingItem value={10} unit="%" text="Token release each cycle" />
           </VestingGroupContainer>
         </VestingContainer>
@@ -288,6 +286,9 @@ const DistributionContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media screen and (max-width: 540px) {
+    padding-bottom: 30px;
+  }
 `;
 
 const DistributionChartContainer = styled.div`
@@ -309,19 +310,3 @@ const SalesInfoGroup = styled.div`
     gap: 40px;
   }
 `;
-
-// const VestingItemGroup = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   gap: 20px;
-//   @media screen and (max-width: 1240px) {
-//     flex-direction: row;
-//     align-items: flex-start;
-//     gap: 56px;
-//   }
-//   @media screen and (max-width: 768px) {
-//     justify-content: space-between;
-//     width: 57%;
-//   }
-// `;
