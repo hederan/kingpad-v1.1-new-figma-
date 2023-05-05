@@ -4,6 +4,7 @@ import { PresaleHeader } from './PresaleHeader';
 import { PresaleProgress } from './PresaleProgress';
 import { BorderLine } from 'src/components/Line/BorderLine';
 import { PresaleInfos } from './PresaleInfos';
+import { JoinCommunity } from 'src/components/JoinCommunity';
 
 export const PresalePage = () => {
   return (
@@ -15,6 +16,8 @@ export const PresalePage = () => {
       <BorderLine />
       <PresaleInfos />
       <BorderLine />
+      <GapBox />
+      <JoinCommunity />
     </PresalePageContainer>
   );
 };
@@ -26,4 +29,8 @@ const PresalePageContainer = styled.div`
   @media screen and (max-width: 540px) {
     gap: 25px;
   }
+`;
+
+const GapBox = styled.div`
+  padding-bottom: 20px;
 `;

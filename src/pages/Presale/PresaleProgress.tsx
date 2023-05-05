@@ -170,9 +170,8 @@ const PhaseName = styled.div`
 `;
 
 const InfoName = styled.div`
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 13px;
+  font-size: 13px;
+  line-height: 20px;
   text-align: center;
   color: #cd9bf4;
 `;
@@ -352,7 +351,7 @@ const PresaleCurrency = styled.div`
 
 const PresaleValueName = styled.div`
   font-weight: 400;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 13px;
   color: #cd9bf4;
 `;
@@ -370,11 +369,24 @@ const PresaleProgressInfos3Container = styled.div`
 const ProgressBar = (props: { value: number }) => {
   const { value } = props;
   return (
-    <ProgressBarContainer>
-      <ProgressValueBar value={value} />
-    </ProgressBarContainer>
+    <ProgressBarWrapper>
+      <ProgressBarContainer>
+        <ProgressValueBar value={value} />
+      </ProgressBarContainer>
+      <ProgressValueTextContainer>
+        <ProgressValueText>Progress</ProgressValueText>
+        <ProgressValue>{value}%</ProgressValue>
+      </ProgressValueTextContainer>
+    </ProgressBarWrapper>
   );
 };
+
+const ProgressBarWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+`;
 
 const ProgressBarContainer = styled.div`
   border: 1px solid #ffffff;
@@ -442,4 +454,29 @@ const PresaleProgressInfoWrapper = styled.div`
   flex-direction: column;
   gap: 25px;
   width: 100%;
+`;
+
+const ProgressValueTextContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media screen and (max-width: 768px) {
+    gap: 5px;
+  }
+`;
+
+const ProgressValueText = styled.div`
+  font-size: 11px;
+  line-height: 13px;
+  color: #cd9bf4;
+`;
+
+const ProgressValue = styled.div`
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 25px;
+  color: #ffffff;
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
