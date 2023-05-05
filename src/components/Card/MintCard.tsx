@@ -66,6 +66,8 @@ const KingpassImg = styled.img`
   top: -35px;
   left: 40px;
   z-index: 1;
+  height: 245px;
+  width: auto;
   @media screen and (max-width: 1084px) {
     position: static;
   }
