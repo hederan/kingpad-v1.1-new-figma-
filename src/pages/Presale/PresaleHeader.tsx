@@ -9,7 +9,7 @@ import {
   YoutubeSvg
 } from 'src/config/images';
 import styled from 'styled-components';
-import { BiPlusCircle } from 'react-icons/bi';
+import { BiMinusCircle, BiPlusCircle } from 'react-icons/bi';
 import { FiPlayCircle } from 'react-icons/fi';
 import {
   AuditBadge,
@@ -20,57 +20,95 @@ import {
   KYCBadge
 } from 'src/components/Badge/Authentication';
 import { MobileBorderLine } from 'src/components/Line/BorderLine';
+import { useState } from 'react';
+import { Collapse } from '@mui/material';
+import ModalVideo from 'react-modal-video';
 
 export const PresaleHeader = () => {
+  const [isOpen, setOpen] = useState(false);
+  const [isVideoOpen, setVideoOpen] = useState(false);
   return (
-    <PresaleHeaderContainer>
-      <PresaleHeaderContent>
-        <PresaleAvatar alt="presale-avatar" />
-        <PresaleHeaderDetail>
-          <PresaleTitle>Project Name</PresaleTitle>
-          <PresaleSocialLinks>
-            <ALink link="/">
-              <PresaleSocialLink src={WebsiteSvg} alt="presale-social-link" />
-            </ALink>
-            <ALink link="/">
-              <PresaleSocialLink src={TwitterSvg} alt="presale-social-link" />
-            </ALink>
-            <ALink link="/">
-              <PresaleSocialLink src={TelegramSvg} alt="presale-social-link" />
-            </ALink>
-            <ALink link="/">
-              <PresaleSocialLink src={DiscordSvg} alt="presale-social-link" />
-            </ALink>
-            <ALink link="/">
-              <PresaleSocialLink src={YoutubeSvg} alt="presale-social-link" />
-            </ALink>
-            <ALink link="/">
-              <PresaleSocialLink src={FacebookSvg} alt="presale-social-link" />
-            </ALink>
-            <ALink link="/">
-              <PresaleSocialLink src={InstagramSvg} alt="presale-social-link" />
-            </ALink>
-          </PresaleSocialLinks>
-          <PresaleDescription>
-            <ProjectDescription>
-              Project Description <BiPlusCircle style={{ width: '16px', height: '16px', cursor: 'pointer' }} />
-            </ProjectDescription>
-            <PlayVideo>
-              Play Video <FiPlayCircle style={{ width: '16px', height: '16px', cursor: 'pointer' }} />
-            </PlayVideo>
-          </PresaleDescription>
-        </PresaleHeaderDetail>
-      </PresaleHeaderContent>
-      <MobileBorderLine />
-      <PresaleBadgeContainer>
-        <AuditBadge />
-        <KYCBadge />
-        <CertikBadge />
-        <InHouseBadge />
-        <EndorsedBadge />
-        <BoostBadge />
-      </PresaleBadgeContainer>
-    </PresaleHeaderContainer>
+    <>
+      <PresaleHeaderContainer>
+        <PresaleHeaderContent>
+          <PresaleAvatar alt="presale-avatar" />
+          <PresaleHeaderDetail>
+            <PresaleTitle>Project Name</PresaleTitle>
+            <PresaleSocialLinks>
+              <ALink link="/">
+                <PresaleSocialLink src={WebsiteSvg} alt="presale-social-link" />
+              </ALink>
+              <ALink link="/">
+                <PresaleSocialLink src={TwitterSvg} alt="presale-social-link" />
+              </ALink>
+              <ALink link="/">
+                <PresaleSocialLink src={TelegramSvg} alt="presale-social-link" />
+              </ALink>
+              <ALink link="/">
+                <PresaleSocialLink src={DiscordSvg} alt="presale-social-link" />
+              </ALink>
+              <ALink link="/">
+                <PresaleSocialLink src={YoutubeSvg} alt="presale-social-link" />
+              </ALink>
+              <ALink link="/">
+                <PresaleSocialLink src={FacebookSvg} alt="presale-social-link" />
+              </ALink>
+              <ALink link="/">
+                <PresaleSocialLink src={InstagramSvg} alt="presale-social-link" />
+              </ALink>
+            </PresaleSocialLinks>
+            <PresaleDescription>
+              <ProjectDescription>
+                Project Description{' '}
+                {isOpen ? (
+                  <BiMinusCircle
+                    style={{ width: '16px', height: '16px', cursor: 'pointer' }}
+                    onClick={() => setOpen(false)}
+                  />
+                ) : (
+                  <BiPlusCircle
+                    style={{ width: '16px', height: '16px', cursor: 'pointer' }}
+                    onClick={() => setOpen(true)}
+                  />
+                )}
+              </ProjectDescription>
+              <PlayVideo>
+                Play Video{' '}
+                <FiPlayCircle
+                  style={{ width: '16px', height: '16px', cursor: 'pointer' }}
+                  onClick={() => setVideoOpen(true)}
+                />
+              </PlayVideo>
+            </PresaleDescription>
+          </PresaleHeaderDetail>
+        </PresaleHeaderContent>
+        <MobileBorderLine />
+        <PresaleBadgeContainer>
+          <AuditBadge />
+          <KYCBadge />
+          <CertikBadge />
+          <InHouseBadge />
+          <EndorsedBadge />
+          <BoostBadge />
+        </PresaleBadgeContainer>
+      </PresaleHeaderContainer>
+      <Collapse in={isOpen}>
+        <DescriptionText>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.{' '}
+          <br />
+          <br />
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+          dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+          amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam quaerat voluptatem. <br />
+          <br /> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+          aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
+          nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </DescriptionText>
+      </Collapse>
+      <ModalVideo channel="youtube" isOpen={isVideoOpen} videoId="G-mIgkf0zAs" onClose={() => setVideoOpen(false)} />
+    </>
   );
 };
 
@@ -212,4 +250,10 @@ const PresaleBadgeContainer = styled.div`
     padding-left: 0px;
     padding-right: 0px;
   }
+`;
+
+const DescriptionText = styled.p`
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
 `;
