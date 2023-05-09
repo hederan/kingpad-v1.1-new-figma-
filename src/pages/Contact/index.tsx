@@ -19,7 +19,7 @@ const ContactContainer = styled.div`
   gap: 100px;
   padding: 110px 110px 0 110px;
   @media screen and (max-width: 1120px) {
-    padding: 110px 0 0px 0px;
+    padding: 110px 0px 0px 0px;
   }
 
   @media screen and (max-width: 640px) {

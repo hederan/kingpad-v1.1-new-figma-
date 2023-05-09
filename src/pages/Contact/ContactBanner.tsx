@@ -91,7 +91,7 @@ const ContactBannerBackgroundFilter = styled.div`
     left: -35%;
   }
   @media screen and (max-width: 768px) {
-    width: 320px;
+    width: 280px;
     height: 640px;
   }
 `;

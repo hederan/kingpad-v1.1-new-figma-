@@ -52,7 +52,8 @@ const ContactInput = styled.input`
   line-height: 20px;
   color: #ffffff;
   outline: none;
-  width: auto;
+  max-width: 100%;
+  width: 100%;
   background-color: transparent;
   font-family: 'gotham-book';
 `;
