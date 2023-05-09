@@ -66,7 +66,6 @@ const ContactInfoContent = styled.textarea`
   line-height: 20px;
   color: #ffffff;
   outline: none;
-  width: 100%;
   background-color: transparent;
   font-family: 'gotham-book';
   resize: none;
