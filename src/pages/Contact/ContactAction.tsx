@@ -52,7 +52,7 @@ const ContactInput = styled.input`
   line-height: 20px;
   color: #ffffff;
   outline: none;
-  width: 100%;
+  width: auto;
   background-color: transparent;
   font-family: 'gotham-book';
 `;
