@@ -7,6 +7,7 @@ export const PUBLIC_ROUTES = {
   kyc: '/kyc',
   privacy: '/privacy',
   terms: '/terms',
+  contact: 'contact',
   error404: '/error404'
 };
 

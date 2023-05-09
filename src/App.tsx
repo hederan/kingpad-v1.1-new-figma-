@@ -14,6 +14,7 @@ import { Audit } from './pages/Audit';
 import { KYC } from './pages/KYC';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
+import { Contact } from './pages/Contact';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               <Route path={PUBLIC_ROUTES.kyc} element={<KYC />} />
               <Route path={PUBLIC_ROUTES.privacy} element={<Privacy />} />
               <Route path={PUBLIC_ROUTES.terms} element={<Terms />} />
+              <Route path={PUBLIC_ROUTES.contact} element={<Contact />} />
               <Route path={PUBLIC_ROUTES.error404} element={<NotFoundPage />} />
               <Route path="*" element={<Navigate to={PUBLIC_ROUTES.error404} replace />} />
             </Routes>

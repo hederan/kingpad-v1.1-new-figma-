@@ -256,4 +256,11 @@ const DescriptionText = styled.p`
   font-size: 15px;
   line-height: 18px;
   font-weight: 400;
+  @media screen and (max-width: 768px) {
+    font-size: 13px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 11px;
+  }
 `;

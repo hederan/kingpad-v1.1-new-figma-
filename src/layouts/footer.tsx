@@ -59,7 +59,14 @@ export const Footer = () => {
                   >
                     About us
                   </FooterLinkNav>
-                  <FooterLinkNav>Contact us</FooterLinkNav>
+                  <FooterLinkNav
+                    onClick={() => {
+                      navigate('/contact');
+                      window.scrollTo(0, 0);
+                    }}
+                  >
+                    Contact us
+                  </FooterLinkNav>
                 </FooterLinkNavs>
               </FooterLink>
             </FooterLinksWrapper>

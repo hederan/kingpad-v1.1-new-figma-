@@ -1,4 +1,4 @@
-import { ContributionCard, EndedCard, NoKingpassCard, NoWalletCard } from 'src/components/Card/PresaleStatusCard';
+import { EndedCard } from 'src/components/Card/PresaleStatusCard';
 import { BorderLine } from 'src/components/Line/BorderLine';
 import { BinanceLogo, StarSvg } from 'src/config/images';
 import styled from 'styled-components';
